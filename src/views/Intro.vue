@@ -238,6 +238,7 @@ export default {
     overflow: hidden;
 
     h4 {
+      width: 9.375rem;
       font-family: "Montserrat";
       font-size: 1.25rem;
       font-weight: 600;
