@@ -1,7 +1,7 @@
 <template>
   <div id="intro">
-    <div class="container">
-      <div class="info_box">
+    <div class="container" id="container">
+      <div class="info_box" id="info_box">
         <h3>들어가기전에</h3>
         <p>이 페이지는 프로젝트나 스터디를 진행하며 배운 기술을 기록하는곳이며 지속적으로 업데이트 됩니다.</p>
         <p>외부에서 가져온 소스나 정보는 별도의 페이지에 기록했으며 상업적인 정보는 기재하지 않았습니다.</p>
@@ -43,7 +43,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    this.intro();
+  },
+  methods: {
+    intro() {
+      setTimeout(() => {
+        document.getElementById("container").classList.add("main-opening-1");
+      }, 200);
+      setTimeout(() => {
+        document.getElementById("container").classList.add("main-opening-2");
+      }, 950);
+      setTimeout(() => {
+        document.getElementById("info_box").classList.add("notice-opening-1");
+      }, 1700);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -53,17 +70,25 @@ export default {};
   position: relative;
 
   .container {
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0.125rem;
     background-color: #161921;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
 
     .info_box {
       position: absolute;
       top: 26%;
       right: 0;
-      width: 71.25rem;
+      width: 0;
       height: 55%;
       background-color: #0f48ed;
+      transition: 0.7s;
+      overflow: hidden;
+      white-space: nowrap;
 
       h3 {
         color: #efefef;
@@ -154,6 +179,9 @@ export default {};
         width: auto;
       }
     }
+    .notice-opening-1 {
+      width: 71.25rem;
+    }
   }
 
   .name {
@@ -170,5 +198,12 @@ export default {};
       font-style: italic;
     }
   }
+}
+#intro .main-opening-1 {
+  width: 2px;
+  height: 100%;
+}
+#intro .main-opening-2 {
+  width: 100%;
 }
 </style>
