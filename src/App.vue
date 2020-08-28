@@ -6,6 +6,7 @@
 <script>
 import "./style/font.css";
 import "./style/reset.css";
+import "./style/common.css";
 
 export default {};
 </script>

@@ -1,42 +1,6 @@
 <template>
   <div id="intro">
     <div class="container" id="container">
-      <div class="info_box" id="info_box">
-        <h3>들어가기전에</h3>
-        <p>
-          이 페이지는 프로젝트나 스터디를 진행하며 배운 기술을 기록하는곳이며
-          지속적으로 업데이트 됩니다.
-        </p>
-        <p>
-          외부에서 가져온 소스나 정보는 별도의 페이지에 기록했으며 상업적인
-          정보는 기재하지 않았습니다.
-        </p>
-        <p>
-          IE는 11버전에서 보일 수 있도록 제작했으며 11이하의 버전에서는 화면이
-          제대로 표시되지 않습니다.
-          <br />크롬 브라우저에서 확인해주시면 감사하겠습니다.
-        </p>
-        <p>
-          Gmail :
-          <a href="mailto:xodm95@gmail.com">xodm95@gmail.com</a>
-          <br />Github :
-          <a href="https://github.com/jsg3121/aboutMe" target="_blank"
-            >https://github.com/jsg3121/aboutMe</a
-          >
-        </p>
-        <p>
-          제작자의 허락없이 본 사이트의 내용을 다른 사이트에 무단으로
-          게시하는것을 금합니다.
-        </p>
-        <div class="container-btn">
-          <button>
-            작업물 보러가기
-            <figure>
-              <img src="../assets/image/arrow@2x.png" alt="go main" />
-            </figure>
-          </button>
-        </div>
-      </div>
       <div class="title">
         <figure>
           <img
@@ -47,6 +11,40 @@
           />
         </figure>
         <h1 id="title-2">2020</h1>
+      </div>
+      <div class="info_box" id="info_box">
+        <h3>들어가기전에</h3>
+        <p>
+          이 페이지는 프로젝트나 스터디를 진행하며 <br class="mobile" />
+          배운 기술을 기록하는곳이며 지속적으로 업데이트 됩니다.
+        </p>
+        <br class="mobile" />
+        <p>
+          IE는 11버전에서 보일 수 있도록 제작했으며 <br class="mobile" />
+          11이하의 버전에서는 화면이 제대로 표시되지 않습니다. <br />크롬
+          브라우저에서 확인해주시면 감사하겠습니다.
+        </p>
+        <br class="mobile" />
+        <p>
+          Gmail :
+          <a href="mailto:xodm95@gmail.com">xodm95@gmail.com</a>
+          <br />Github :
+          <a href="https://github.com/jsg3121/aboutMe" target="_blank"
+            >https://github.com/jsg3121/aboutMe</a
+          >
+        </p>
+        <p>
+          제작자의 허락없이 본 사이트의 내용을<br class="mobile" />다른 사이트에
+          무단으로 게시하는것을 금합니다.
+        </p>
+        <div class="container-btn">
+          <button>
+            작업물 보러가기
+            <figure>
+              <img src="../assets/image/arrow@2x.png" alt="go main" />
+            </figure>
+          </button>
+        </div>
       </div>
       <div class="name">
         <h4 id="name">Jang Sun Gyu</h4>
@@ -105,6 +103,7 @@ export default {
     .info_box {
       position: absolute;
       top: 14.375rem;
+      z-index: 1;
       right: 0;
       width: 0;
       height: 34rem;
@@ -121,6 +120,7 @@ export default {
         font-size: 2.125rem;
         font-weight: normal;
         text-align: left;
+        overflow: hidden;
       }
 
       p {
@@ -181,6 +181,7 @@ export default {
       position: absolute;
       left: 20rem;
       top: 10rem;
+      z-index: 5;
       width: 100%;
       overflow: hidden;
 
@@ -310,6 +311,72 @@ export default {
 
       .notice-opening-1 {
         width: 55rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #intro {
+    .container {
+      .title {
+        left: 0;
+      }
+
+      .title {
+        top: 4rem;
+        position: relative;
+
+        figure {
+          width: 95%;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        h1 {
+          margin-top: 0;
+          margin-left: 2.5%;
+          font-size: 3rem;
+        }
+      }
+
+      .info_box {
+        top: 5.5rem;
+        height: 30rem;
+
+        h3 {
+          margin-top: 2rem;
+          margin-left: 1rem;
+          font-size: 2rem;
+        }
+
+        p {
+          margin-left: 1.5rem;
+        }
+
+        .container-btn {
+          width: 90%;
+          height: 3rem;
+          left: 50%;
+          transform: translateX(-50%);
+
+          button {
+            figure {
+              width: 2rem;
+              height: 2rem;
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+
+      .name {
+        left: 2.5%;
+      }
+
+      .notice-opening-1 {
+        width: 100%;
+        position: relative;
       }
     }
   }
