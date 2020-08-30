@@ -3,25 +3,21 @@
     <div class="container" id="container">
       <div class="title">
         <figure>
-          <img
-            id="title-1"
-            src="../assets/image/title@2x.png"
-            alt="title"
-            draggable="false"
-          />
+          <img id="title-1" src="../assets/image/title@2x.png" alt="title" draggable="false" />
         </figure>
         <h1 id="title-2">2020</h1>
       </div>
       <div class="info_box" id="info_box">
         <h3>들어가기전에</h3>
         <p>
-          이 페이지는 프로젝트나 스터디를 진행하며 <br class="mobile" />
-          배운 기술을 기록하는곳이며 지속적으로 업데이트 됩니다.
+          이 페이지는 프로젝트나 스터디를 진행하며
+          <br class="mobile" />배운 기술을 기록하는곳이며 지속적으로 업데이트 됩니다.
         </p>
         <br class="mobile" />
         <p>
-          IE는 11버전에서 보일 수 있도록 제작했으며 <br class="mobile" />
-          11이하의 버전에서는 화면이 제대로 표시되지 않습니다. <br />크롬
+          IE는 11버전에서 보일 수 있도록 제작했으며
+          <br class="mobile" />11이하의 버전에서는 화면이 제대로 표시되지 않습니다.
+          <br />크롬
           브라우저에서 확인해주시면 감사하겠습니다.
         </p>
         <br class="mobile" />
@@ -29,12 +25,14 @@
           Gmail :
           <a href="mailto:xodm95@gmail.com">xodm95@gmail.com</a>
           <br />Github :
-          <a href="https://github.com/jsg3121/aboutMe" target="_blank"
-            >https://github.com/jsg3121/aboutMe</a
-          >
+          <a
+            href="https://github.com/jsg3121/aboutMe"
+            target="_blank"
+          >https://github.com/jsg3121/aboutMe</a>
         </p>
         <p>
-          제작자의 허락없이 본 사이트의 내용을<br class="mobile" />다른 사이트에
+          제작자의 허락없이 본 사이트의 내용을
+          <br class="mobile" />다른 사이트에
           무단으로 게시하는것을 금합니다.
         </p>
         <div class="container-btn">
@@ -78,8 +76,8 @@ export default {
       setTimeout(() => {
         document.getElementById("name").classList.add("name-opening");
       }, 3000);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -105,12 +103,22 @@ export default {
       top: 14.375rem;
       z-index: 1;
       right: 0;
-      width: 0;
+      width: 71.25rem;
       height: 34rem;
-      background-color: #0f48ed;
       transition: width 0.7s;
       overflow: hidden;
       white-space: nowrap;
+
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: #161921;
+        transition: width 0.7s;
+      }
 
       h3 {
         color: #efefef;
@@ -177,6 +185,13 @@ export default {
       }
     }
 
+    .notice-opening-1 {
+      background-color: #0f48ed;
+      &:after {
+        width: 0;
+      }
+    }
+
     .title {
       position: absolute;
       left: 20rem;
@@ -218,9 +233,6 @@ export default {
       .title-opening-2 {
         transform: translateY(0);
       }
-    }
-    .notice-opening-1 {
-      width: 71.25rem;
     }
   }
 
@@ -298,7 +310,7 @@ export default {
 
       .info_box {
         top: 17.5rem;
-
+        width: 55rem;
         p,
         h3 {
           margin-left: 2.7rem;
@@ -307,10 +319,6 @@ export default {
         .container-btn {
           left: 2.7rem;
         }
-      }
-
-      .notice-opening-1 {
-        width: 55rem;
       }
     }
   }
@@ -343,7 +351,7 @@ export default {
       .info_box {
         top: 5.5rem;
         height: 30rem;
-
+        width: 100%;
         h3 {
           margin-top: 2rem;
           margin-left: 1rem;
@@ -375,7 +383,6 @@ export default {
       }
 
       .notice-opening-1 {
-        width: 100%;
         position: relative;
       }
     }
