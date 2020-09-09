@@ -74,7 +74,34 @@ export default {
         document.getElementById("name").classList.add("name-opening");
       }, 3000);
     },
-    goMain: () => {},
+    goMain: function () {
+      setTimeout(() => {
+        document.getElementById("container").classList.remove("main-opening-1");
+      }, 2350);
+      setTimeout(() => {
+        document.getElementById("container").classList.remove("main-opening-2");
+      }, 1850);
+      setTimeout(() => {
+        document.getElementById("title-1").classList.remove("title-opening-1");
+      }, 1250);
+      setTimeout(() => {
+        document.getElementById("title-2").classList.remove("title-opening-2");
+      }, 950);
+      setTimeout(() => {
+        document
+          .getElementById("info_box")
+          .classList.remove("notice-opening-1");
+      }, 200);
+      setTimeout(() => {
+        document.getElementById("name").classList.remove("name-opening");
+      }, 300);
+
+      setTimeout(() => {
+        this.$router.push({
+          name: "Main",
+        });
+      }, 2950);
+    },
   },
 };
 </script>
@@ -89,7 +116,7 @@ export default {
     width: 1px;
     height: 0;
     background-color: #161921;
-    transition: width 0.7s, height 0.7s;
+    transition: width 0.5s, height 0.5s;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -106,6 +133,7 @@ export default {
       transition: width 0.7s;
       overflow: hidden;
       white-space: nowrap;
+      background-color: #0f48ed;
 
       // &:after {
       //   content: "";
@@ -184,7 +212,6 @@ export default {
     }
 
     .notice-opening-1 {
-      background-color: #0f48ed;
       width: 71.25rem;
     }
 
