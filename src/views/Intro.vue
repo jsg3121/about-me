@@ -25,10 +25,7 @@
           Gmail :
           <a href="mailto:xodm95@gmail.com">xodm95@gmail.com</a>
           <br />Github :
-          <a
-            href="https://github.com/jsg3121/aboutMe"
-            target="_blank"
-          >https://github.com/jsg3121/aboutMe</a>
+          <a href="https://github.com/jsg3121" target="_blank">https://github.com/jsg3121</a>
         </p>
         <p>
           제작자의 허락없이 본 사이트의 내용을
@@ -36,7 +33,7 @@
           무단으로 게시하는것을 금합니다.
         </p>
         <div class="container-btn">
-          <button>
+          <button @click="goMain()">
             작업물 보러가기
             <figure>
               <img src="../assets/image/arrow@2x.png" alt="go main" />
@@ -77,6 +74,7 @@ export default {
         document.getElementById("name").classList.add("name-opening");
       }, 3000);
     },
+    goMain: () => {},
   },
 };
 </script>
@@ -103,22 +101,22 @@ export default {
       top: 14.375rem;
       z-index: 1;
       right: 0;
-      width: 71.25rem;
+      width: 0;
       height: 34rem;
       transition: width 0.7s;
       overflow: hidden;
       white-space: nowrap;
 
-      &:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        background-color: #161921;
-        transition: width 0.7s;
-      }
+      // &:after {
+      //   content: "";
+      //   width: 100%;
+      //   height: 100%;
+      //   display: block;
+      //   position: absolute;
+      //   top: 0;
+      //   background-color: #161921;
+      //   transition: width 0.7s;
+      // }
 
       h3 {
         color: #efefef;
@@ -187,9 +185,7 @@ export default {
 
     .notice-opening-1 {
       background-color: #0f48ed;
-      &:after {
-        width: 0;
-      }
+      width: 71.25rem;
     }
 
     .title {
@@ -349,9 +345,10 @@ export default {
       }
 
       .info_box {
-        top: 5.5rem;
+        top: 18.5rem;
         height: 30rem;
-        width: 100%;
+        width: 0;
+
         h3 {
           margin-top: 2rem;
           margin-left: 1rem;
@@ -383,7 +380,7 @@ export default {
       }
 
       .notice-opening-1 {
-        position: relative;
+        width: 100%;
       }
     }
   }
