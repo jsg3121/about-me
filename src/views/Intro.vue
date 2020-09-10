@@ -10,28 +10,18 @@
       <div class="info_box" id="info_box">
         <h3>들어가기전에</h3>
         <p>
-          이 페이지는 프로젝트나 스터디를 진행하며
-          <br class="mobile" />배운 기술을 기록하는곳이며 지속적으로 업데이트 됩니다.
+          이 사이트는 프로젝트를 진행한 경험을 기록하는곳이며
+          <br />프로젝트 진행 상황에 따라 업데이트 될 예정입니다.
         </p>
-        <br class="mobile" />
+        <br />
         <p>
-          IE는 11버전에서 보일 수 있도록 제작했으며
-          <br class="mobile" />11이하의 버전에서는 화면이 제대로 표시되지 않습니다.
-          <br />크롬
-          브라우저에서 확인해주시면 감사하겠습니다.
+          <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는 화면이 제대로 표시되지 않을 수 있습니다.
+          <br class="mobile" />
+          <br />
+          <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를 확인하실 수 있습니다.
         </p>
-        <br class="mobile" />
-        <p>
-          Gmail :
-          <a href="mailto:xodm95@gmail.com">xodm95@gmail.com</a>
-          <br />Github :
-          <a href="https://github.com/jsg3121" target="_blank">https://github.com/jsg3121</a>
-        </p>
-        <p>
-          제작자의 허락없이 본 사이트의 내용을
-          <br class="mobile" />다른 사이트에
-          무단으로 게시하는것을 금합니다.
-        </p>
+        <br />
+        <p class="alert">제작자의 허락없이 본 사이트의 내용을 다른 사이트에 무단으로 게시하는것을 금합니다.</p>
         <div class="container-btn">
           <button @click="goMain()">
             작업물 보러가기
@@ -166,13 +156,14 @@ export default {
         line-height: 1.5;
         letter-spacing: 0.0625rem;
 
-        a {
-          color: #efefef;
+        span {
           text-decoration: underline;
+          text-underline-position: under;
+        }
 
-          &:visited {
-            color: #efefef;
-          }
+        &.alert {
+          margin-top: 2.875rem;
+          font-size: 0.875rem;
         }
       }
 
