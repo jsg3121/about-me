@@ -101,12 +101,7 @@ export default {
         color: #4d5772;
         margin-bottom: 1.375rem;
         padding-top: 1.8125rem;
-      }
-
-      @media screen and (max-width: 1280px) {
-        h4 {
-          margin-left: 1.25rem;
-        }
+        margin-left: 2.5rem;
       }
     }
 
@@ -172,7 +167,6 @@ export default {
     .etc {
       width: 40%;
       height: 28.4375rem;
-      border-right: 1px solid #d7d7d7;
 
       .skill_list {
         display: flex;
