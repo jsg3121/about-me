@@ -94,7 +94,7 @@ export default {};
     margin: 0 auto;
 
     .description {
-      width: 57.375rem;
+      width: 57.975rem;
       position: absolute;
       bottom: 2.25rem;
       left: 0;

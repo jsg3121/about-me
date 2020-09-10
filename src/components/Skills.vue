@@ -7,7 +7,7 @@
           <h4>FRONT-END</h4>
           <ul class="skill_list">
             <li v-for="skill in frontEnd" :key="skill.id">
-              <figure>
+              <figure :data-grage="skill.grade">
                 <img
                   :src="skill.src"
                   @mouseover="skill.src = skill.overSrc"
@@ -21,7 +21,7 @@
           <h4>BACK-END</h4>
           <ul class="skill_list">
             <li v-for="skill in backEnd" :key="skill.id">
-              <figure>
+              <figure :data-grage="skill.grade">
                 <img
                   :src="skill.src"
                   alt
@@ -36,7 +36,7 @@
           <h4>ETC</h4>
           <ul class="skill_list">
             <li v-for="skill in etc" :key="skill.id">
-              <figure>
+              <figure :data-grage="skill.grade">
                 <img
                   :src="skill.src"
                   alt
@@ -61,35 +61,35 @@ export default {
       frontEnd: [
         {
           id: 1,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/html-n.png"),
           leaveSrc: require("../assets/image/html-n.png"),
           overSrc: require("../assets/image/html-h.png"),
         },
         {
           id: 2,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/css-n.png"),
           leaveSrc: require("../assets/image/css-n.png"),
           overSrc: require("../assets/image/css-h.png"),
         },
         {
           id: 3,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/js-n.png"),
           leaveSrc: require("../assets/image/js-n.png"),
           overSrc: require("../assets/image/js-h.png"),
         },
         {
           id: 4,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/jquery-n.png"),
           leaveSrc: require("../assets/image/jquery-n.png"),
           overSrc: require("../assets/image/jquery-h.png"),
         },
         {
           id: 5,
-          grade: "",
+          grade: "Beginner",
           src: require("../assets/image/vue-js-n.png"),
           leaveSrc: require("../assets/image/vue-js-n.png"),
           overSrc: require("../assets/image/vue-js-h.png"),
@@ -98,42 +98,42 @@ export default {
       backEnd: [
         {
           id: 1,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/java-n.png"),
           leaveSrc: require("../assets/image/java-n.png"),
           overSrc: require("../assets/image/java-h.png"),
         },
         {
           id: 2,
-          grade: "",
+          grade: "Beginner",
           src: require("../assets/image/node-n.png"),
           leaveSrc: require("../assets/image/node-n.png"),
           overSrc: require("../assets/image/node-h.png"),
         },
         {
           id: 3,
-          grade: "",
+          grade: "Beginner",
           src: require("../assets/image/express-n.png"),
           leaveSrc: require("../assets/image/express-n.png"),
           overSrc: require("../assets/image/express-h.png"),
         },
         {
           id: 4,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/oracle-n.png"),
           leaveSrc: require("../assets/image/oracle-n.png"),
           overSrc: require("../assets/image/oracle-h.png"),
         },
         {
           id: 5,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/tomcat-n.png"),
           leaveSrc: require("../assets/image/tomcat-n.png"),
           overSrc: require("../assets/image/tomcat-h.png"),
         },
         {
           id: 6,
-          grade: "",
+          grade: "Intermediate",
           src: require("../assets/image/spring-n.png"),
           leaveSrc: require("../assets/image/spring-n.png"),
           overSrc: require("../assets/image/spring-h.png"),
@@ -142,14 +142,14 @@ export default {
       etc: [
         {
           id: 1,
-          grade: "",
+          grade: "Beginner",
           src: require("../assets/image/psd-n.png"),
           leaveSrc: require("../assets/image/psd-n.png"),
           overSrc: require("../assets/image/psd-h.png"),
         },
         {
           id: 2,
-          grade: "",
+          grade: "Beginner",
           src: require("../assets/image/affect-n.png"),
           leaveSrc: require("../assets/image/affect-n.png"),
           overSrc: require("../assets/image/affect-h.png"),
@@ -196,6 +196,29 @@ export default {
         margin-bottom: 1.375rem;
         padding-top: 1.8125rem;
         margin-left: 2.5rem;
+      }
+
+      ul {
+        li {
+          figure {
+            position: relative;
+            &:hover {
+              &:after {
+                // content: attr(data-grage);
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1rem;
+                font-weight: normal;
+                color: #ffffff;
+                display: block;
+                pointer-events: none;
+              }
+            }
+          }
+        }
       }
     }
 
