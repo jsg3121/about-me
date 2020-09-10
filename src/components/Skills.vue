@@ -8,7 +8,11 @@
           <ul class="skill_list">
             <li v-for="skill in frontEnd" :key="skill.id">
               <figure>
-                <img :src="skill.src" alt />
+                <img
+                  :src="skill.src"
+                  @mouseover="skill.src = skill.overSrc"
+                  @mouseleave="skill.src = skill.leaveSrc"
+                />
               </figure>
             </li>
           </ul>
@@ -18,7 +22,12 @@
           <ul class="skill_list">
             <li v-for="skill in backEnd" :key="skill.id">
               <figure>
-                <img :src="skill.src" alt />
+                <img
+                  :src="skill.src"
+                  alt
+                  @mouseover="skill.src = skill.overSrc"
+                  @mouseleave="skill.src = skill.leaveSrc"
+                />
               </figure>
             </li>
           </ul>
@@ -28,7 +37,12 @@
           <ul class="skill_list">
             <li v-for="skill in etc" :key="skill.id">
               <figure>
-                <img :src="skill.src" alt />
+                <img
+                  :src="skill.src"
+                  alt
+                  @mouseover="skill.src = skill.overSrc"
+                  @mouseleave="skill.src = skill.leaveSrc"
+                />
               </figure>
             </li>
           </ul>
@@ -42,24 +56,103 @@
 export default {
   data() {
     return {
+      mouseOver: false,
       frontEnd: [
-        { id: 1, grade: "", src: require("../assets/image/html-n@2x.png") },
-        { id: 2, grade: "", src: require("../assets/image/css-n@2x.png") },
-        { id: 3, grade: "", src: require("../assets/image/js-n@2x.png") },
-        { id: 4, grade: "", src: require("../assets/image/jquery-n@2x.png") },
-        { id: 5, grade: "", src: require("../assets/image/vue-js-n@2x.png") },
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/html-n.png"),
+          leaveSrc: require("../assets/image/html-n.png"),
+          overSrc: require("../assets/image/html-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/css-n.png"),
+          leaveSrc: require("../assets/image/css-n.png"),
+          overSrc: require("../assets/image/css-h.png"),
+        },
+        {
+          id: 3,
+          grade: "",
+          src: require("../assets/image/js-n.png"),
+          leaveSrc: require("../assets/image/js-n.png"),
+          overSrc: require("../assets/image/js-h.png"),
+        },
+        {
+          id: 4,
+          grade: "",
+          src: require("../assets/image/jquery-n.png"),
+          leaveSrc: require("../assets/image/jquery-n.png"),
+          overSrc: require("../assets/image/jquery-h.png"),
+        },
+        {
+          id: 5,
+          grade: "",
+          src: require("../assets/image/vue-js-n.png"),
+          leaveSrc: require("../assets/image/vue-js-n.png"),
+          overSrc: require("../assets/image/vue-js-h.png"),
+        },
       ],
       backEnd: [
-        { id: 1, grade: "", src: require("../assets/image/java-n@2x.png") },
-        { id: 2, grade: "", src: require("../assets/image/node-n@2x.png") },
-        { id: 3, grade: "", src: require("../assets/image/express-n@2x.png") },
-        { id: 4, grade: "", src: require("../assets/image/oracle-n@2x.png") },
-        { id: 5, grade: "", src: require("../assets/image/tomcat-n@2x.png") },
-        { id: 6, grade: "", src: require("../assets/image/spring-n@2x.png") },
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/java-n.png"),
+          leaveSrc: require("../assets/image/java-n.png"),
+          overSrc: require("../assets/image/java-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/node-n.png"),
+          leaveSrc: require("../assets/image/node-n.png"),
+          overSrc: require("../assets/image/node-h.png"),
+        },
+        {
+          id: 3,
+          grade: "",
+          src: require("../assets/image/express-n.png"),
+          leaveSrc: require("../assets/image/express-n.png"),
+          overSrc: require("../assets/image/express-h.png"),
+        },
+        {
+          id: 4,
+          grade: "",
+          src: require("../assets/image/oracle-n.png"),
+          leaveSrc: require("../assets/image/oracle-n.png"),
+          overSrc: require("../assets/image/oracle-h.png"),
+        },
+        {
+          id: 5,
+          grade: "",
+          src: require("../assets/image/tomcat-n.png"),
+          leaveSrc: require("../assets/image/tomcat-n.png"),
+          overSrc: require("../assets/image/tomcat-h.png"),
+        },
+        {
+          id: 6,
+          grade: "",
+          src: require("../assets/image/spring-n.png"),
+          leaveSrc: require("../assets/image/spring-n.png"),
+          overSrc: require("../assets/image/spring-h.png"),
+        },
       ],
       etc: [
-        { id: 1, grade: "", src: require("../assets/image/psd-n@2x.png") },
-        { id: 2, grade: "", src: require("../assets/image/affect-n@2x.png") },
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/psd-n.png"),
+          leaveSrc: require("../assets/image/psd-n.png"),
+          overSrc: require("../assets/image/psd-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/affect-n.png"),
+          leaveSrc: require("../assets/image/affect-n.png"),
+          overSrc: require("../assets/image/affect-h.png"),
+        },
       ],
     };
   },

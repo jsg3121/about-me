@@ -11,19 +11,14 @@
     </div>
     <div class="profile-imformation">
       <div class="description">
-        <p>
-          어릴때 부터 호기심이 많은 성격에 만들어 보았던 간단한 계산기 프로그램으로 무언가를 만드는 것의 재미를 느끼게 되었고 그때부터 개발자를
-          꿈꾸게 되었습니다. 그래서 대학교도 컴퓨터공학과를 가게 되었고 자연스럽게 많은것을 개발하게 될 수 있었습니다.
-          그 중 Javascript가 가지고 있는 가능성과 다양성에 매력을 느끼게 되어 웹 어플리케이션 개발자가 되기 위해 많은 노력을 하고 있습니다.
-          저는 제 목표를 '잘하는' 개발자로 삼아서 더 공부하고 있습니다. 경력을 쌓은 개발자는 경력만 쌓이면 자연스럽게 되지만
-        </p>
+        <p></p>
       </div>
       <div class="image">
         <figure class="motto">
-          <img src="../assets/image/name-deco@2x.png" alt />
+          <img src="../assets/image/name-deco.png" alt />
         </figure>
         <figure class="profile-img">
-          <img src="../assets/image/image@2x.png" alt />
+          <img src="../assets/image/image.png" alt />
         </figure>
       </div>
     </div>
@@ -42,7 +37,7 @@ export default {};
   .main-information {
     width: 100%;
     height: 50rem;
-    background: url(../assets/image/main-bg@2x.png) top/cover no-repeat;
+    background: url(../assets/image/main-bg.png) top/cover no-repeat;
 
     .title-content {
       position: relative;

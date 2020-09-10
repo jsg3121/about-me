@@ -3,7 +3,7 @@
     <div class="container" id="container">
       <div class="title">
         <figure>
-          <img id="title-1" src="../assets/image/title@2x.png" alt="title" draggable="false" />
+          <img id="title-1" src="../assets/image/title.png" alt="title" draggable="false" />
         </figure>
         <h1 id="title-2">2020</h1>
       </div>
@@ -36,7 +36,7 @@
           <button @click="goMain()">
             작업물 보러가기
             <figure>
-              <img src="../assets/image/arrow@2x.png" alt="go main" />
+              <img src="../assets/image/arrow.png" alt="go main" />
             </figure>
           </button>
         </div>
