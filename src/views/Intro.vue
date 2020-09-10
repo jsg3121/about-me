@@ -42,6 +42,110 @@
 export default {
   created() {
     this.intro();
+    this.$store.state.frontEnd = this.frontEnd;
+    this.$store.state.backEnd = this.backEnd;
+    this.$store.state.etc = this.etc;
+  },
+  data() {
+    return {
+      frontEnd: [
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/html-n.png"),
+          leaveSrc: require("../assets/image/html-n.png"),
+          overSrc: require("../assets/image/html-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/css-n.png"),
+          leaveSrc: require("../assets/image/css-n.png"),
+          overSrc: require("../assets/image/css-h.png"),
+        },
+        {
+          id: 3,
+          grade: "",
+          src: require("../assets/image/js-n.png"),
+          leaveSrc: require("../assets/image/js-n.png"),
+          overSrc: require("../assets/image/js-h.png"),
+        },
+        {
+          id: 4,
+          grade: "",
+          src: require("../assets/image/jquery-n.png"),
+          leaveSrc: require("../assets/image/jquery-n.png"),
+          overSrc: require("../assets/image/jquery-h.png"),
+        },
+        {
+          id: 5,
+          grade: "",
+          src: require("../assets/image/vue-js-n.png"),
+          leaveSrc: require("../assets/image/vue-js-n.png"),
+          overSrc: require("../assets/image/vue-js-h.png"),
+        },
+      ],
+      backEnd: [
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/java-n.png"),
+          leaveSrc: require("../assets/image/java-n.png"),
+          overSrc: require("../assets/image/java-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/node-n.png"),
+          leaveSrc: require("../assets/image/node-n.png"),
+          overSrc: require("../assets/image/node-h.png"),
+        },
+        {
+          id: 3,
+          grade: "",
+          src: require("../assets/image/express-n.png"),
+          leaveSrc: require("../assets/image/express-n.png"),
+          overSrc: require("../assets/image/express-h.png"),
+        },
+        {
+          id: 4,
+          grade: "",
+          src: require("../assets/image/oracle-n.png"),
+          leaveSrc: require("../assets/image/oracle-n.png"),
+          overSrc: require("../assets/image/oracle-h.png"),
+        },
+        {
+          id: 5,
+          grade: "",
+          src: require("../assets/image/tomcat-n.png"),
+          leaveSrc: require("../assets/image/tomcat-n.png"),
+          overSrc: require("../assets/image/tomcat-h.png"),
+        },
+        {
+          id: 6,
+          grade: "",
+          src: require("../assets/image/spring-n.png"),
+          leaveSrc: require("../assets/image/spring-n.png"),
+          overSrc: require("../assets/image/spring-h.png"),
+        },
+      ],
+      etc: [
+        {
+          id: 1,
+          grade: "",
+          src: require("../assets/image/psd-n.png"),
+          leaveSrc: require("../assets/image/psd-n.png"),
+          overSrc: require("../assets/image/psd-h.png"),
+        },
+        {
+          id: 2,
+          grade: "",
+          src: require("../assets/image/affect-n.png"),
+          leaveSrc: require("../assets/image/affect-n.png"),
+          overSrc: require("../assets/image/affect-h.png"),
+        },
+      ],
+    };
   },
   methods: {
     intro() {
@@ -125,17 +229,6 @@ export default {
       white-space: nowrap;
       background-color: #0f48ed;
 
-      // &:after {
-      //   content: "";
-      //   width: 100%;
-      //   height: 100%;
-      //   display: block;
-      //   position: absolute;
-      //   top: 0;
-      //   background-color: #161921;
-      //   transition: width 0.7s;
-      // }
-
       h3 {
         color: #efefef;
         margin-top: 6.25rem;
@@ -149,12 +242,13 @@ export default {
 
       p {
         color: #efefef;
-        margin-left: 3.8125rem;
+        margin-left: 5rem;
         font-size: 1rem;
         font-weight: normal;
         text-align: left;
         line-height: 1.5;
         letter-spacing: 0.0625rem;
+        position: relative;
 
         span {
           text-decoration: underline;
@@ -164,6 +258,18 @@ export default {
         &.alert {
           margin-top: 2.875rem;
           font-size: 0.875rem;
+        }
+
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 0.3rem;
+          height: 0.3rem;
+          background-color: #ffffff;
+          position: absolute;
+          top: 0.6rem;
+          left: -0.8125rem;
+          border-radius: 0.15rem;
         }
       }
 
@@ -297,7 +403,9 @@ export default {
 
       .info_box {
         top: 17.5rem;
-        p,
+        p {
+          margin-left: 3.7rem;
+        }
         h3 {
           margin-left: 2.7rem;
         }
@@ -308,7 +416,7 @@ export default {
       }
 
       .name {
-        top: 50rem;
+        top: 55rem;
       }
     }
   }
@@ -325,7 +433,9 @@ export default {
       .info_box {
         top: 17.5rem;
         width: 55rem;
-        p,
+        p {
+          margin-left: 3.7rem;
+        }
         h3 {
           margin-left: 2.7rem;
         }
@@ -363,7 +473,7 @@ export default {
       }
 
       .info_box {
-        top: 18.5rem;
+        top: 20rem;
         height: 30rem;
         width: 0;
 
@@ -374,7 +484,7 @@ export default {
         }
 
         p {
-          margin-left: 1.5rem;
+          margin-left: 2rem;
         }
 
         .container-btn {
