@@ -15,16 +15,17 @@
         </p>
         <br />
         <p>
-          <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는 화면이 제대로 표시되지 않을 수 있습니다.
-          <br class="mobile" />
+          <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는
+          <br class="mobile" />화면이 제대로 표시되지 않을 수 있습니다.
+          <br />
           <br />
           <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를 확인하실 수 있습니다.
         </p>
         <br />
-        <p class="alert">제작자의 허락없이 본 사이트의 내용을 다른 사이트에 무단으로 게시하는것을 금합니다.</p>
+        <p class="alert">본 사이트의 내용을 다른 사이트에 무단으로 게시하는것을 금합니다.</p>
         <div class="container-btn">
           <button @click="goMain()">
-            작업물 보러가기
+            들어가기
             <figure>
               <img src="../assets/image/arrow.png" alt="go main" />
             </figure>

@@ -204,17 +204,21 @@ export default {
             position: relative;
             &:hover {
               &:after {
-                // content: attr(data-grage);
-                content: "";
+                content: attr(data-grage);
+                // content: "";
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 1rem;
                 font-weight: normal;
-                color: #ffffff;
                 display: block;
                 pointer-events: none;
+                font-family: "Montserrat";
+                font-size: 1.25rem;
+                font-weight: normal;
+                text-align: center;
+                color: #ffffff;
               }
             }
           }
