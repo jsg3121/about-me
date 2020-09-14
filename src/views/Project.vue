@@ -1,31 +1,87 @@
 <template>
   <div class="project-container">
     <div class="project-list">
-      <button class="prev_card"></button>
-      <ul>
-        <li>
+      <button class="prev_card" @click="prevCard"></button>
+      <ul class="card_list">
+        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
           <div class="card1"></div>
         </li>
-        <li>
+        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
           <div class="card2 before"></div>
         </li>
-        <li>
+        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
           <div class="card3 now"></div>
         </li>
-        <li>
+        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
           <div class="card4 after"></div>
         </li>
-        <li>
+        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
           <div class="card5"></div>
         </li>
       </ul>
-      <button class="next_card"></button>
+      <button class="next_card" @click="nextCard"></button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      index: 3,
+      transform: 0,
+      doubleclick: true,
+    };
+  },
+  methods: {
+    prevCard: function () {
+      if (this.index > 1 && this.doubleclick) {
+        this.doubleclick = false;
+        let list = document.querySelectorAll(".card_list .list_item");
+        this.index--;
+        if (list[this.index - 2] != null) {
+          list[this.index - 2].childNodes[0].classList.add("before");
+        }
+
+        list[this.index - 1].childNodes[0].classList.remove("before");
+        list[this.index - 1].childNodes[0].classList.add("now");
+
+        list[this.index].childNodes[0].classList.add("after");
+
+        this.transform += 100;
+        setTimeout(() => {
+          this.doubleclick = true;
+        }, 700);
+      }
+    },
+
+    nextCard: function () {
+      if (this.index < 5 && this.doubleclick) {
+        this.doubleclick = false;
+        let list = document.querySelectorAll(".card_list .list_item");
+        if (list[this.index - 2] != null) {
+          list[this.index - 2].childNodes[0].classList.remove("before");
+        }
+
+        list[this.index - 1].childNodes[0].classList.remove("now");
+        list[this.index - 1].childNodes[0].classList.add("before");
+
+        list[this.index].childNodes[0].classList.remove("after");
+        list[this.index].childNodes[0].classList.add("now");
+
+        if (list[this.index + 1] != null) {
+          list[this.index + 1].childNodes[0].classList.add("after");
+        }
+
+        this.index++;
+        this.transform -= 100;
+        setTimeout(() => {
+          this.doubleclick = true;
+        }, 700);
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -39,7 +95,7 @@ export default {};
     content: "";
     position: absolute;
     pointer-events: none;
-    box-shadow: inset 0 0 14.375rem 6.1875rem #000f2a;
+    box-shadow: inset 0 0 14.375rem 3.0875rem #000f2a;
     width: 100%;
     height: 100%;
     top: 0;
@@ -95,11 +151,15 @@ export default {};
       left: 50%;
       transform: translateX(-50%);
 
-      li {
+      .list_item {
         width: 68.75rem;
         height: 37.5rem;
-        margin: 0 1.25rem;
         position: relative;
+        transition: transform 0.6s;
+
+        > div {
+          transition: transform 0.6s;
+        }
 
         > div.before {
           transform: perspective(81.25rem) rotateY(35deg) translateX(25.125rem);

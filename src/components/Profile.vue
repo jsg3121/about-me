@@ -2,7 +2,7 @@
   <div class="profile-container">
     <div class="main-information">
       <div class="title-content">
-        <div div class="title-box">
+        <div class="title-box">
           <p>I am</p>
           <h1>A FRONT-END</h1>
           <h1>DEVELOPER</h1>
@@ -59,6 +59,17 @@ export default {};
         position: absolute;
         top: 19.375rem;
         left: 0;
+
+        &:after {
+          content: "";
+          background: url(../assets/image/scroll.png) center/contain no-repeat;
+          display: block;
+          width: 1.875rem;
+          height: 3.875rem;
+          position: absolute;
+          bottom: 4.375rem;
+          right: 4.375rem;
+        }
 
         p {
           height: 1.625rem;
