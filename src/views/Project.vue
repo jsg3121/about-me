@@ -3,19 +3,34 @@
     <div class="project-list">
       <button class="prev_card" @click="prevCard"></button>
       <ul class="card_list">
-        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
+        <li
+          class="list_item"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+        >
           <div class="card1"></div>
         </li>
-        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
+        <li
+          class="list_item"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+        >
           <div class="card2 before"></div>
         </li>
-        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
+        <li
+          class="list_item"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+        >
           <div class="card3 now"></div>
         </li>
-        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
+        <li
+          class="list_item"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+        >
           <div class="card4 after"></div>
         </li>
-        <li class="list_item" :style="{ transform: 'translateX(' + transform + '%)' }">
+        <li
+          class="list_item"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+        >
           <div class="card5"></div>
         </li>
       </ul>
@@ -30,6 +45,7 @@ export default {
     return {
       index: 3,
       transform: 0,
+      margin: 0,
       doubleclick: true,
     };
   },
@@ -49,6 +65,8 @@ export default {
         list[this.index].childNodes[0].classList.add("after");
 
         this.transform += 100;
+        this.margin += 2.5;
+
         setTimeout(() => {
           this.doubleclick = true;
         }, 700);
@@ -75,6 +93,8 @@ export default {
 
         this.index++;
         this.transform -= 100;
+        this.margin -= 2.5;
+
         setTimeout(() => {
           this.doubleclick = true;
         }, 700);
@@ -154,6 +174,7 @@ export default {
       .list_item {
         width: 68.75rem;
         height: 37.5rem;
+        margin: 0 1.25rem;
         position: relative;
         transition: transform 0.6s;
 
