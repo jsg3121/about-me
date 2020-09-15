@@ -1,37 +1,19 @@
 <template>
   <div class="project-container">
+    <vueHeader></vueHeader>
     <div class="project-list">
       <button class="prev_card" @click="prevCard"></button>
       <ul class="card_list">
         <li
           class="list_item"
           :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
+          v-for="i in 5"
+          :key="i"
+          @click="detailProject"
         >
-          <div class="card1"></div>
-        </li>
-        <li
-          class="list_item"
-          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
-        >
-          <div class="card2 before"></div>
-        </li>
-        <li
-          class="list_item"
-          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
-        >
-          <div class="card3 now"></div>
-        </li>
-        <li
-          class="list_item"
-          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
-        >
-          <div class="card4 after"></div>
-        </li>
-        <li
-          class="list_item"
-          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
-        >
-          <div class="card5"></div>
+          <div class="card1" :class="'sss' + i">
+            <h1>PROJECT NAME</h1>
+          </div>
         </li>
       </ul>
       <button class="next_card" @click="nextCard"></button>
@@ -40,7 +22,17 @@
 </template>
 
 <script>
+import vueHeader from "../components/Header";
 export default {
+  components: {
+    vueHeader,
+  },
+  mounted() {
+    let list = document.querySelectorAll(".card_list .list_item");
+    list[this.index - 2].childNodes[0].classList.add("before");
+    list[this.index - 1].childNodes[0].classList.add("now");
+    list[this.index].childNodes[0].classList.add("after");
+  },
   data() {
     return {
       index: 3,
@@ -69,7 +61,7 @@ export default {
 
         setTimeout(() => {
           this.doubleclick = true;
-        }, 700);
+        }, 400);
       }
     },
 
@@ -97,7 +89,16 @@ export default {
 
         setTimeout(() => {
           this.doubleclick = true;
-        }, 700);
+        }, 400);
+      }
+    },
+    detailProject: function (event) {
+      let target = event.target;
+      if (target.getAttribute("class").indexOf("now") != -1) {
+        target.parentNode.classList.add("open");
+        this.$router.push({
+          name: "Detail",
+        });
       }
     },
   },
@@ -136,13 +137,18 @@ export default {
       left: 1.0625rem;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.3) url(../assets/image/left-arrow.png)
+        center/contain no-repeat;
       box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
       z-index: 10;
       border: 0;
 
       &:hover {
         background-color: rgba(0, 86, 245, 0.3);
+      }
+
+      &:active {
+        background-color: rgba(175, 175, 175, 0.3);
       }
     }
 
@@ -153,13 +159,18 @@ export default {
       right: 1.0625rem;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.3) url(../assets/image/right-arrow.png)
+        center/contain no-repeat;
       box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
       z-index: 10;
       border: 0;
 
       &:hover {
         background-color: rgba(0, 86, 245, 0.3);
+      }
+
+      &:active {
+        background-color: rgba(175, 175, 175, 0.3);
       }
     }
 
@@ -176,45 +187,73 @@ export default {
         height: 37.5rem;
         margin: 0 1.25rem;
         position: relative;
-        transition: transform 0.6s;
+        transition: transform 0.3s;
+
+        // &.open {
+        //   width: 100vw;
+        //   height: 100vh;
+        //   position: fixed;
+        //   left: 50%;
+        //   top: 0;
+        //   transform: translate(-50%, -9.375rem) !important;
+        //   z-index: 1000;
+        //   margin: 0;
+        //   transition: 0.4s;
+        // }
 
         > div {
-          transition: transform 0.6s;
+          transition: transform 0.3s;
+          position: relative;
+
+          h1 {
+            font-family: "Montserrat";
+            width: 50rem;
+            height: 5.25rem;
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 1.05;
+            text-align: center;
+            color: #ffffff;
+            position: absolute;
+            bottom: -6.4375rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
 
         > div.before {
           transform: perspective(81.25rem) rotateY(35deg) translateX(25.125rem);
+
+          &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+          }
         }
 
         > div.after {
+          z-index: 10;
           transform: perspective(81.25rem) rotateY(-35deg)
             translateX(-25.125rem);
-        }
 
+          &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+          }
+        }
         .card1 {
           width: 100%;
           height: 100%;
-          background-color: red;
-        }
-        .card2 {
-          width: 100%;
-          height: 100%;
-          background-color: blue;
-        }
-        .card3 {
-          width: 100%;
-          height: 100%;
-          background-color: yellow;
-        }
-        .card4 {
-          width: 100%;
-          height: 100%;
-          background-color: brown;
-        }
-        .card5 {
-          width: 100%;
-          height: 100%;
-          background-color: green;
+          background-color: beige;
         }
 
         &:first-child {
