@@ -22,9 +22,7 @@
         <figure class="motto">
           <img src="../assets/image/name-deco.png" alt />
         </figure>
-        <figure class="profile-img">
-          <img src="../assets/image/image.png" alt />
-        </figure>
+        <figure class="profile-img"></figure>
       </div>
     </div>
   </div>
@@ -141,6 +139,7 @@ export default {};
         bottom: 2.25rem;
         right: 0;
         z-index: 3;
+        background-color: violet;
 
         img {
           width: 100%;

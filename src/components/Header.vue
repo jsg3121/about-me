@@ -1,0 +1,63 @@
+<template>
+  <div class="header_container">
+    <nav class="header_nav" @scroll="scrollHeader()">
+      <router-link :to="{name: 'Project'}" class="link">PROJECT</router-link>
+      <a class="link">ABOUT ME</a>
+    </nav>
+  </div>
+</template>
+
+<script>
+export default {
+  created() {
+    window.addEventListener("scroll", this.scrollHeader);
+  },
+  methods: {
+    scrollHeader: function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > 0) {
+        let headerBg = document.querySelector(".header_container");
+        headerBg.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+      } else if (scrollTop == 0) {
+        let headerBg = document.querySelector(".header_container");
+        headerBg.style.backgroundColor = "transparent";
+      }
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+.header_container {
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  z-index: 50;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .header_nav {
+    height: 100%;
+    width: 100%;
+    .link {
+      position: relative;
+      left: 17.7%;
+      margin-right: 4.89%;
+      top: 1.8125rem;
+      font-family: "Montserrat";
+      font-size: 1.375rem;
+      font-weight: normal;
+      text-align: center;
+      color: #ffffff;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+</style>
