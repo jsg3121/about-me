@@ -165,6 +165,7 @@ export default {
   width: 100%;
   background-color: #eceef0;
   padding-top: 8.125rem;
+  padding-bottom: 7.6875rem;
 
   .skills-content {
     max-width: 1280px;

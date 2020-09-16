@@ -2,10 +2,12 @@
   <div class="detail-container">
     <vueHeader></vueHeader>
     <div class="detail-content">
-      <div class="content_title">
-        <button class="prev_card"></button>
-        <h1>PROJECT NAME_01</h1>
-        <button class="next_card"></button>
+      <div class="conetnt_background">
+        <div class="content_title">
+          <button class="prev_card"></button>
+          <h1>PROJECT NAME_01</h1>
+          <button class="next_card"></button>
+        </div>
       </div>
       <div class="content_description">
         <div class="description">
@@ -71,14 +73,17 @@
         </div>
       </div>
     </div>
+    <vueFooter></vueFooter>
   </div>
 </template>
 
 <script>
 import vueHeader from "../components/Header";
+import vueFooter from "../components/Footer";
 export default {
   components: {
     vueHeader,
+    vueFooter,
   },
 };
 </script>
@@ -89,68 +94,71 @@ export default {
 
   .detail-content {
     width: 100%;
-    height: 37.5rem;
-    background-color: wheat;
 
-    .content_title {
+    .conetnt_background {
       width: 100%;
-      max-width: 1280px;
-      height: 100%;
-      margin: 0 auto;
-      position: relative;
+      height: 37.5rem;
+      background-color: wheat;
 
-      h1 {
-        width: 50rem;
-        position: absolute;
-        left: 50%;
-        top: 12.5rem;
-        transform: translateX(-50%);
-        font-family: "Montserrat";
-        font-size: 4.375rem;
-        font-weight: 600;
-        text-align: center;
-        color: #ffffff;
-      }
+      .content_title {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
 
-      .prev_card {
-        width: 3.75rem;
-        height: 3.75rem;
-        position: absolute;
-        left: 1.0625rem;
-        top: 12.5rem;
-        background: rgba(255, 255, 255, 0.3) url(../assets/image/left-arrow.png)
-          center/contain no-repeat;
-        box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
-        z-index: 10;
-        border: 0;
-
-        &:hover {
-          background-color: rgba(0, 86, 245, 0.3);
+        h1 {
+          width: 50rem;
+          position: absolute;
+          left: 50%;
+          top: 12.5rem;
+          transform: translateX(-50%);
+          font-family: "Montserrat";
+          font-size: 4.375rem;
+          font-weight: 600;
+          text-align: center;
+          color: #ffffff;
         }
 
-        &:active {
-          background-color: rgba(175, 175, 175, 0.3);
+        .prev_card {
+          width: 3.75rem;
+          height: 3.75rem;
+          position: absolute;
+          left: 1.0625rem;
+          top: 12.5rem;
+          background: rgba(255, 255, 255, 0.3)
+            url(../assets/image/left-arrow.png) center/contain no-repeat;
+          box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
+          z-index: 10;
+          border: 0;
+
+          &:hover {
+            background-color: rgba(0, 86, 245, 0.3);
+          }
+
+          &:active {
+            background-color: rgba(175, 175, 175, 0.3);
+          }
         }
-      }
 
-      .next_card {
-        width: 3.75rem;
-        height: 3.75rem;
-        position: absolute;
-        right: 1.0625rem;
-        top: 12.5rem;
-        background: rgba(255, 255, 255, 0.3)
-          url(../assets/image/right-arrow.png) center/contain no-repeat;
-        box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
-        z-index: 10;
-        border: 0;
+        .next_card {
+          width: 3.75rem;
+          height: 3.75rem;
+          position: absolute;
+          right: 1.0625rem;
+          top: 12.5rem;
+          background: rgba(255, 255, 255, 0.3)
+            url(../assets/image/right-arrow.png) center/contain no-repeat;
+          box-shadow: 0px 0.25rem 0.625rem 0 rgba(0, 15, 42, 0.3);
+          z-index: 10;
+          border: 0;
 
-        &:hover {
-          background-color: rgba(0, 86, 245, 0.3);
-        }
+          &:hover {
+            background-color: rgba(0, 86, 245, 0.3);
+          }
 
-        &:active {
-          background-color: rgba(175, 175, 175, 0.3);
+          &:active {
+            background-color: rgba(175, 175, 175, 0.3);
+          }
         }
       }
     }
@@ -158,10 +166,12 @@ export default {
     .content_description {
       width: 100%;
       position: relative;
+      margin-bottom: -12.5rem;
 
       .description {
         width: 100%;
         max-width: 1280px;
+        height: 69.9375rem;
         margin: 0 auto;
         position: relative;
         top: -12.5rem;
