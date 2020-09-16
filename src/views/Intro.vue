@@ -294,7 +294,6 @@ export default {
 
       .info_box {
         top: 17.5rem;
-        width: 55rem;
         p {
           margin-left: 3.7rem;
         }
@@ -305,6 +304,10 @@ export default {
         .container-btn {
           left: 2.7rem;
         }
+      }
+
+      .notice-opening-1 {
+        width: 53.35rem;
       }
     }
   }

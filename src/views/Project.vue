@@ -6,13 +6,16 @@
       <ul class="card_list">
         <li
           class="list_item"
-          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))' }"
-          v-for="i in 5"
-          :key="i"
+          :style="{ transform: 'translateX(calc(' + transform + '% + ' + margin + 'rem))'}"
+          v-for="item in project"
+          :key="item.projectNum"
           @click="detailProject"
         >
-          <div class="card1" :class="'sss' + i">
-            <h1>PROJECT NAME</h1>
+          <div
+            class="card1"
+            :style=" {background: 'url('+ item.thumbnail + ') center/contain no-repeat'}"
+          >
+            <h1>{{item.projectName}}</h1>
           </div>
         </li>
       </ul>
@@ -27,37 +30,47 @@ export default {
   components: {
     vueHeader,
   },
+  created() {
+    this.index = Math.floor(this.$store.state.project.length / 2);
+  },
   mounted() {
     let list = document.querySelectorAll(".card_list .list_item");
-    list[this.index - 2].childNodes[0].classList.add("before");
-    list[this.index - 1].childNodes[0].classList.add("now");
-    list[this.index].childNodes[0].classList.add("after");
+    list[this.index - 1].childNodes[0].classList.add("before");
+    list[this.index].childNodes[0].classList.add("now");
+    list[this.index + 1].childNodes[0].classList.add("after");
   },
   data() {
     return {
-      index: 3,
+      index: 0,
       transform: 0,
       margin: 0,
       doubleclick: true,
+      project: this.$store.state.project,
     };
   },
   methods: {
     prevCard: function () {
-      if (this.index > 1 && this.doubleclick) {
+      if (this.index > 0 && this.doubleclick) {
         this.doubleclick = false;
         let list = document.querySelectorAll(".card_list .list_item");
         this.index--;
-        if (list[this.index - 2] != null) {
-          list[this.index - 2].childNodes[0].classList.add("before");
-        }
-
-        list[this.index - 1].childNodes[0].classList.remove("before");
-        list[this.index - 1].childNodes[0].classList.add("now");
-
-        list[this.index].childNodes[0].classList.add("after");
 
         this.transform += 100;
         this.margin += 2.5;
+
+        if (list[this.index - 1] != null) {
+          list[this.index - 1].childNodes[0].classList.add("before");
+        }
+
+        list[this.index].childNodes[0].classList.remove("before");
+        list[this.index].childNodes[0].classList.add("now");
+
+        list[this.index + 1].childNodes[0].classList.remove("now");
+        list[this.index + 1].childNodes[0].classList.add("after");
+
+        if (list[this.index + 2] != null) {
+          list[this.index + 2].childNodes[0].classList.remove("after");
+        }
 
         setTimeout(() => {
           this.doubleclick = true;
@@ -66,26 +79,28 @@ export default {
     },
 
     nextCard: function () {
-      if (this.index < 5 && this.doubleclick) {
+      if (this.index < this.project.length - 1 && this.doubleclick) {
         this.doubleclick = false;
+
         let list = document.querySelectorAll(".card_list .list_item");
-        if (list[this.index - 2] != null) {
-          list[this.index - 2].childNodes[0].classList.remove("before");
-        }
+        this.index++;
 
-        list[this.index - 1].childNodes[0].classList.remove("now");
-        list[this.index - 1].childNodes[0].classList.add("before");
-
-        list[this.index].childNodes[0].classList.remove("after");
-        list[this.index].childNodes[0].classList.add("now");
+        this.transform -= 100;
+        this.margin -= 2.5;
 
         if (list[this.index + 1] != null) {
           list[this.index + 1].childNodes[0].classList.add("after");
         }
 
-        this.index++;
-        this.transform -= 100;
-        this.margin -= 2.5;
+        list[this.index].childNodes[0].classList.remove("after");
+        list[this.index].childNodes[0].classList.add("now");
+
+        list[this.index - 1].childNodes[0].classList.remove("now");
+        list[this.index - 1].childNodes[0].classList.add("before");
+
+        if (list[this.index - 2] != null) {
+          list[this.index - 2].childNodes[0].classList.remove("before");
+        }
 
         setTimeout(() => {
           this.doubleclick = true;
@@ -116,7 +131,7 @@ export default {
     content: "";
     position: absolute;
     pointer-events: none;
-    box-shadow: inset 0 0 14.375rem 3.0875rem #000f2a;
+    box-shadow: inset 0 1.625rem 9.375rem 0.6875rem #000f2a;
     width: 100%;
     height: 100%;
     top: 0;
@@ -207,7 +222,7 @@ export default {
 
           h1 {
             font-family: "Montserrat";
-            width: 50rem;
+            width: 100%;
             height: 5.25rem;
             font-size: 5rem;
             font-weight: bold;
@@ -218,6 +233,7 @@ export default {
             bottom: -6.4375rem;
             left: 50%;
             transform: translateX(-50%);
+            pointer-events: none;
           }
         }
 
