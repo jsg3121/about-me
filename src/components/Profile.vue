@@ -22,7 +22,9 @@
         <figure class="motto">
           <img src="../assets/image/name-deco.png" alt />
         </figure>
-        <figure class="profile-img"></figure>
+        <figure class="profile-img">
+          <img src="../assets/image/image.png" alt />
+        </figure>
       </div>
     </div>
   </div>
