@@ -31,9 +31,6 @@
           </button>
         </div>
       </div>
-      <div class="name">
-        <h4 id="name">Jang Sun Gyu</h4>
-      </div>
     </div>
   </div>
 </template>
@@ -63,9 +60,6 @@ export default {
       setTimeout(() => {
         document.getElementById("info_box").classList.add("notice-opening-1");
       }, 2000);
-      setTimeout(() => {
-        document.getElementById("name").classList.add("name-opening");
-      }, 3000);
     },
     goMain: function () {
       setTimeout(() => {
@@ -85,9 +79,6 @@ export default {
           .getElementById("info_box")
           .classList.remove("notice-opening-1");
       }, 200);
-      setTimeout(() => {
-        document.getElementById("name").classList.remove("name-opening");
-      }, 300);
 
       setTimeout(() => {
         this.$router.push({
@@ -262,30 +253,6 @@ export default {
   .main-opening-2 {
     width: 100%;
   }
-
-  .name {
-    position: absolute;
-    left: 20rem;
-    top: 46.875rem;
-    overflow: hidden;
-
-    h4 {
-      width: 9.375rem;
-      font-family: "Montserrat";
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.2;
-      text-align: left;
-      color: #efefef;
-      font-style: italic;
-      transition: 0.9s;
-      transform: translateY(100%);
-    }
-
-    .name-opening {
-      transform: translateY(0);
-    }
-  }
 }
 
 @media screen and (max-width: 1720px) {
@@ -312,10 +279,6 @@ export default {
         .container-btn {
           left: 2.7rem;
         }
-      }
-
-      .name {
-        top: 55rem;
       }
     }
   }
@@ -388,24 +351,21 @@ export default {
 
         .container-btn {
           width: 90%;
-          height: 3rem;
+          height: 4.8rem;
           left: 50%;
           transform: translateX(-50%);
 
           button {
+            font-size: 1.5rem;
+
             figure {
-              width: 2rem;
-              height: 2rem;
+              width: 3rem;
+              height: 3rem;
               margin-left: 1rem;
             }
           }
         }
       }
-
-      .name {
-        left: 2.5%;
-      }
-
       .notice-opening-1 {
         width: 100%;
       }
