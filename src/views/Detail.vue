@@ -17,7 +17,7 @@
               </ul>
               <ul class="slide_indicate">
                 <li></li>
-                <li class = "select"></li>
+                <li class="select"></li>
                 <li></li>
                 <li></li>
               </ul>
