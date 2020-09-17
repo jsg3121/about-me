@@ -111,6 +111,7 @@ export default {
       let target = event.target;
       if (target.getAttribute("class").indexOf("now") != -1) {
         target.parentNode.classList.add("open");
+        this.$store.commit("dataIndex", this.index);
         this.$router.push({
           name: "Detail",
         });
@@ -203,6 +204,7 @@ export default {
         margin: 0 1.25rem;
         position: relative;
         transition: transform 0.3s;
+        cursor: pointer;
 
         // &.open {
         //   width: 100vw;

@@ -2,8 +2,8 @@
   <div class="header_container">
     <nav class="header_nav" @scroll="scrollHeader()">
       <router-link :to="{name: 'Main'}" class="link">MAIN</router-link>
-      <router-link :to="{name: 'Project'}" class="link">PROJECT</router-link>
       <a class="link">ABOUT ME</a>
+      <router-link :to="{name: 'Project'}" class="link">PROJECT</router-link>
     </nav>
   </div>
 </template>

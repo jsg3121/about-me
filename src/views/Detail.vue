@@ -2,11 +2,14 @@
   <div class="detail-container">
     <vueHeader></vueHeader>
     <div class="detail-content">
-      <div class="conetnt_background">
+      <div
+        class="conetnt_background"
+        :style="{background: 'url('+ detailData[detailIndex].thumbnail +') top/cover no-repeat'}"
+      >
         <div class="content_title">
-          <button class="prev_card"></button>
-          <h1>PROJECT NAME_01</h1>
-          <button class="next_card"></button>
+          <button class="prev_card" @click="prevData"></button>
+          <h1>{{detailData[detailIndex].projectName}}</h1>
+          <button class="next_card" @click="nextData"></button>
         </div>
       </div>
       <div class="content_description">
@@ -15,13 +18,21 @@
             <button class="prev_card"></button>
             <div class="slide_box">
               <ul class="slide_list">
-                <li class="slide_item"></li>
+                <li
+                  class="slide_item"
+                  v-for="item in detailData[detailIndex].img_src"
+                  :key="item.id"
+                >
+                  <figure>
+                    <img :src="item.src" alt />
+                  </figure>
+                </li>
               </ul>
               <ul class="slide_indicate">
-                <li></li>
+                <!-- <li></li>
                 <li class="select"></li>
                 <li></li>
-                <li></li>
+                <li></li>-->
               </ul>
             </div>
             <button class="next_card"></button>
@@ -35,39 +46,39 @@
                 <h3>참여인원</h3>
                 <h4>Team Members</h4>
               </div>
-              <div class="text_conetnt">
-                <p>testtest</p>
-                <p>test</p>
-                <p>taaaaext</p>
-              </div>
+              <ul class="text_conetnt">
+                <li v-for="list in detailData[detailIndex].members" :key="list.id">
+                  <p>{{list.member}}</p>
+                </li>
+              </ul>
             </div>
             <div>
               <div class="text_title">
                 <figure>
                   <img src="../assets/image/date-icon.png" alt />
                 </figure>
-                <h3>참여인원</h3>
-                <h4>Team Members</h4>
+                <h3>제작기간</h3>
+                <h4>Working Date</h4>
               </div>
-              <div class="text_conetnt">
-                <p>testtest</p>
-                <p>test</p>
-                <p>taaaaext</p>
-              </div>
+              <ul class="text_conetnt">
+                <li>
+                  <p>{{detailData[detailIndex].date}}</p>
+                </li>
+              </ul>
             </div>
             <div>
               <div class="text_title">
                 <figure>
                   <img src="../assets/image/skill-icon.png" alt />
                 </figure>
-                <h3>참여인원</h3>
-                <h4>Team Members</h4>
+                <h3>사용기술</h3>
+                <h4>Skills</h4>
               </div>
-              <div class="text_conetnt">
-                <p>testtest</p>
-                <p>test</p>
-                <p>taaaaext</p>
-              </div>
+              <ul class="text_conetnt">
+                <li v-for="list in detailData[detailIndex].skills" :key="list.id">
+                  <p>{{list.skill}}</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -85,6 +96,25 @@ export default {
     vueHeader,
     vueFooter,
   },
+  created() {},
+  data() {
+    return {
+      detailIndex: this.$store.state.dataIndex,
+      detailData: this.$store.state.project,
+    };
+  },
+  methods: {
+    prevData: function () {
+      if (this.detailIndex > 0) {
+        this.detailIndex--;
+      }
+    },
+    nextData: function () {
+      if (this.detailIndex < this.detailData.length - 1) {
+        this.detailIndex++;
+      }
+    },
+  },
 };
 </script>
 
@@ -98,7 +128,18 @@ export default {
     .conetnt_background {
       width: 100%;
       height: 37.5rem;
-      background-color: wheat;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
 
       .content_title {
         width: 100%;
@@ -107,7 +148,7 @@ export default {
         position: relative;
 
         h1 {
-          width: 50rem;
+          width: 80%;
           position: absolute;
           left: 50%;
           top: 12.5rem;
@@ -189,6 +230,23 @@ export default {
             height: 37.5rem;
             background-color: #e1e1e1;
             position: relative;
+            overflow: hidden;
+
+            .slide_list {
+              display: flex;
+
+              .slide_item {
+                figure {
+                  width: 67.5rem;
+                  height: 37.5rem;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
 
             .slide_indicate {
               display: flex;
@@ -297,16 +355,20 @@ export default {
 
           .text_conetnt {
             width: 100%;
+            min-height: 9rem;
             text-align: center;
 
-            p {
+            li {
               width: 100%;
               height: 1.75rem;
-              font-size: 1.25rem;
-              font-weight: normal;
-              line-height: 1.4;
-              text-align: center;
-              color: #4d5772;
+
+              p {
+                font-size: 1.25rem;
+                font-weight: normal;
+                line-height: 1.4;
+                text-align: center;
+                color: #4d5772;
+              }
             }
           }
         }

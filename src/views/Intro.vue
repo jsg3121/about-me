@@ -8,7 +8,9 @@
         <h1 id="title-2">2020</h1>
       </div>
       <div class="info_box" id="info_box">
-        <h3>들어가기전에</h3>
+        <h3>찾아주셔서 감사합니다.</h3>
+        <p>Vue.js 를 이용하여 제작하였습니다.</p>
+        <br />
         <p>
           이 사이트는 프로젝트를 진행한 경험을 기록하는곳이며
           <br class="mobile" />프로젝트 진행 상황에 따라 업데이트 될 예정입니다.
@@ -21,7 +23,7 @@
           <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를 확인하실 수 있습니다.
         </p>
         <br />
-        <p class="alert">본 사이트의 내용을 다른 사이트에 무단으로 게시하는것을 금합니다.</p>
+        <p class="alert">© 2015 COPIRIGHT. ALL RIGHTS RESERVED</p>
         <div class="container-btn">
           <button @click="goMain()">
             들어가기
@@ -146,8 +148,15 @@ export default {
         }
 
         &.alert {
-          margin-top: 2.875rem;
-          font-size: 0.875rem;
+          position: absolute;
+          right: 0.75rem;
+          bottom: 0.2rem;
+          margin-left: 1.05rem;
+          margin-top: 0;
+          font-size: 0.75rem;
+          &:after {
+            display: none;
+          }
         }
 
         &:after {
