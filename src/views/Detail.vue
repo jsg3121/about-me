@@ -62,6 +62,10 @@
               </div>
               <ul class="text_conetnt">
                 <li>
+                  <p
+                    class="alert"
+                    v-if="detailData[detailIndex].alert != ''"
+                  >{{detailData[detailIndex].alert}}</p>
                   <p>{{detailData[detailIndex].date}}</p>
                 </li>
               </ul>
@@ -154,10 +158,11 @@ export default {
           top: 12.5rem;
           transform: translateX(-50%);
           font-family: "Montserrat";
-          font-size: 4.375rem;
+          font-size: 3.525rem;
           font-weight: 600;
           text-align: center;
           color: #ffffff;
+          text-shadow: 0.125rem 0.1875rem 0.5625rem #4e4e4e;
         }
 
         .prev_card {
@@ -177,7 +182,7 @@ export default {
           }
 
           &:active {
-            background-color: rgba(175, 175, 175, 0.3);
+            background-color: rgba(0, 64, 182, 0.5);
           }
         }
 
@@ -198,7 +203,7 @@ export default {
           }
 
           &:active {
-            background-color: rgba(175, 175, 175, 0.3);
+            background-color: rgba(0, 64, 182, 0.5);
           }
         }
       }
@@ -243,6 +248,7 @@ export default {
                   img {
                     width: 100%;
                     height: 100%;
+                    object-fit: contain;
                   }
                 }
               }
@@ -361,6 +367,7 @@ export default {
             li {
               width: 100%;
               height: 1.75rem;
+              position: relative;
 
               p {
                 font-size: 1.25rem;
@@ -368,6 +375,13 @@ export default {
                 line-height: 1.4;
                 text-align: center;
                 color: #4d5772;
+              }
+
+              .alert {
+                font-size: 0.75rem;
+                position: absolute;
+                top: -3.5625rem;
+                color: #8a8a8a;
               }
             }
           }

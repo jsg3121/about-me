@@ -10,8 +10,8 @@ import Detail from "@/views/Detail";
 Vue.use(Router);
 /* eslint-disable */
 export default new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
+  // mode: "history",
+  // base: process.env.BASE_URL,
   routes: [
     // {
     //   path: "/",

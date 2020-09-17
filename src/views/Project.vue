@@ -16,6 +16,7 @@
             :style=" {background: 'url('+ item.thumbnail + ') center/contain no-repeat'}"
           >
             <h1>{{item.projectName}}</h1>
+            <h2>{{item.subName}}</h2>
           </div>
         </li>
       </ul>
@@ -160,11 +161,11 @@ export default {
       border: 0;
 
       &:hover {
-        background-color: rgba(0, 86, 245, 0.3);
+        background-color: rgba(0, 86, 245, 0.5);
       }
 
       &:active {
-        background-color: rgba(175, 175, 175, 0.3);
+        background-color: rgba(0, 64, 182, 0.5);
       }
     }
 
@@ -182,11 +183,11 @@ export default {
       border: 0;
 
       &:hover {
-        background-color: rgba(0, 86, 245, 0.3);
+        background-color: rgba(0, 86, 245, 0.5);
       }
 
       &:active {
-        background-color: rgba(175, 175, 175, 0.3);
+        background-color: rgba(0, 64, 182, 0.5);
       }
     }
 
@@ -226,13 +227,27 @@ export default {
             font-family: "Montserrat";
             width: 100%;
             height: 5.25rem;
-            font-size: 5rem;
+            font-size: 3.125rem;
             font-weight: bold;
             line-height: 1.05;
             text-align: center;
             color: #ffffff;
             position: absolute;
             bottom: -6.4375rem;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+          }
+
+          h2 {
+            font-family: "Montserrat";
+            font-size: 1.875rem;
+            font-weight: 600;
+            line-height: 1.06;
+            text-align: center;
+            color: #0056f5;
+            position: absolute;
+            bottom: -6.9375rem;
             left: 50%;
             transform: translateX(-50%);
             pointer-events: none;
@@ -251,6 +266,14 @@ export default {
             left: 0;
             background-color: rgba(0, 0, 0, 0.4);
           }
+
+          h1 {
+            color: #676767;
+          }
+
+          h2 {
+            color: #00318c;
+          }
         }
 
         > div.after {
@@ -266,6 +289,14 @@ export default {
             top: 0;
             left: 0;
             background-color: rgba(0, 0, 0, 0.4);
+          }
+
+          h1 {
+            color: #676767;
+          }
+
+          h2 {
+            color: #00318c;
           }
         }
         .card1 {
