@@ -15,9 +15,9 @@
       <div class="content_description">
         <div class="description">
           <div class="description_slide">
-            <button class="prev_card"></button>
+            <button class="prev_card" @click="prevList"></button>
             <div class="slide_box">
-              <ul class="slide_list">
+              <ul class="slide_list" :style="{transform: 'translateX(-'+(listIndex * 100)+'%)'}">
                 <li
                   class="slide_item"
                   v-for="item in detailData[detailIndex].img_src"
@@ -28,14 +28,14 @@
                   </figure>
                 </li>
               </ul>
-              <ul class="slide_indicate">
-                <!-- <li></li>
-                <li class="select"></li>
-                <li></li>
-                <li></li>-->
+              <ul
+                class="slide_indicate"
+                :style="{width : ((12 * detailData[detailIndex].img_src.length) + (15 * (detailData[detailIndex].img_src.length - 1)) + 12) / 16 + 'rem'} "
+              >
+                <li v-for="list in detailData[detailIndex].img_src" :key="list.id"></li>
               </ul>
             </div>
-            <button class="next_card"></button>
+            <button class="next_card" @click="nextList"></button>
           </div>
           <div class="description_text">
             <div>
@@ -101,8 +101,13 @@ export default {
     vueFooter,
   },
   created() {},
+  mounted() {
+    let list = document.querySelectorAll(".slide_indicate li");
+    list[0].classList.add("select");
+  },
   data() {
     return {
+      listIndex: 0,
       detailIndex: this.$store.state.dataIndex,
       detailData: this.$store.state.project,
     };
@@ -117,6 +122,31 @@ export default {
       if (this.detailIndex < this.detailData.length - 1) {
         this.detailIndex++;
       }
+    },
+    prevList: function () {
+      if (this.listIndex > 0) {
+        this.listIndex--;
+        console.log(this.listIndex);
+        this.activeIndi();
+      }
+    },
+    nextList: function () {
+      if (
+        this.listIndex <
+        this.detailData[this.detailIndex].img_src.length - 1
+      ) {
+        this.listIndex++;
+        console.log(this.listIndex);
+        this.activeIndi();
+      }
+    },
+    activeIndi: function () {
+      let item = document.querySelectorAll(".slide_indicate li");
+      item.forEach((i) => {
+        i.classList.remove("select");
+      });
+
+      item[this.listIndex].classList.add("select");
     },
   },
 };
@@ -142,7 +172,7 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.5);
       }
 
       .content_title {
@@ -162,7 +192,6 @@ export default {
           font-weight: 600;
           text-align: center;
           color: #ffffff;
-          text-shadow: 0.125rem 0.1875rem 0.5625rem #4e4e4e;
         }
 
         .prev_card {
@@ -239,6 +268,7 @@ export default {
 
             .slide_list {
               display: flex;
+              transition: transform 0.4s;
 
               .slide_item {
                 figure {
@@ -261,6 +291,7 @@ export default {
               bottom: 1.875rem;
               left: 50%;
               transform: translateX(-50%);
+              height: 1.5rem;
 
               li {
                 width: 0.75rem;
@@ -269,6 +300,7 @@ export default {
                 border-radius: 50%;
                 margin-right: 0.9375rem;
                 cursor: pointer;
+                transition: width 0.3s, height 0.3s;
 
                 &:last-child {
                   margin-right: 0;
