@@ -4,7 +4,7 @@
 https://sg-polio.netlify.app/ (작업중입니다 완성되지 않았어요)**
 속도 문제로 인해 완성이 됐을 때 변경 예정입니다.
 
-**http://sungyujang.com/#/ (완성된 사이트 입니다) **
+**http://sungyujang.com/#/ (완성된 사이트 입니다)**
 
 ## Who am I
 
