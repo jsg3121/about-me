@@ -316,4 +316,67 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .skills-container {
+    padding-top: 3rem;
+
+    .inner-container {
+      .front-end {
+        margin-top: 1.25rem;
+
+        .skill_list {
+          justify-content: center;
+          flex-wrap: wrap;
+
+          li {
+            width: calc(80% / 3);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+
+            figure {
+              width: 100%;
+              height: 100%;
+
+              &:after {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+
+      .back-end,
+      .etc {
+        width: 100%;
+        border-bottom: 1px solid #d7d7d7;
+        border-right: 0;
+
+        .skill_list {
+          justify-content: center;
+          height: auto;
+
+          li {
+            width: calc(80% / 3);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+
+            figure {
+              width: 100%;
+              height: 100%;
+
+              &:after {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .etc {
+        height: auto;
+      }
+    }
+  }
+}
 </style>

@@ -16,8 +16,8 @@
         <p>개발이란 과정도 목표를 향해 이해하고 시도하며 성장해 완성된 결과물을 보았을 때</p>
         <p>다가오는 성취감과 뿌듯함은 게임을 할 때와 같이 매우 소중합니다.</p>
         <br />
-        <p>여러 경험들을 거쳐 이제는 아무것도 없는 공간에 협업하는 이들의 모든 노력들을 표현할 수 있는 기술을 가졌습니다.</p>
-        <p>스스로 더욱 발전하며 즐거운 성취감을 느낄 수 있도록 더욱 높은 곳을 위해 도전하겠습니다.</p>
+        <p>여러 경험들을 거쳐 이제는 아무것도 없는 공간에, 협업하는 이들의 모든 노력들을 표현할 수 있는 기술을 가졌습니다.</p>
+        <p>스스로 더욱 발전하며 즐거운 성취감을 느낄 수 있도록 더욱 높은 곳을 위해 끈임없이 도전하고 노력해 나아가겠습니다.</p>
       </div>
       <div class="image">
         <figure class="motto">
@@ -149,14 +149,67 @@ export default {};
         }
       }
     }
+  }
+}
 
-    @media screen and (max-width: 1280px) {
-      .description {
-        left: 1.25rem;
+@media screen and (max-width: 1280px) {
+  .description {
+    left: 1.25rem;
+  }
+  .image {
+    .profile-img {
+      right: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .profile-container {
+    height: 70.125rem;
+    .main-information {
+      .title-content {
+        .title-box {
+          width: 249px;
+          height: 225px;
+
+          &:after {
+            bottom: 2rem;
+            right: 2.675rem;
+          }
+
+          p {
+            margin-top: 6.4375rem;
+            font-size: 1.575rem;
+            line-height: 1;
+            margin-left: 2.8625rem;
+          }
+
+          h1 {
+            font-size: 2.55rem;
+            margin-left: 2.8625rem;
+          }
+        }
       }
+    }
+    .profile-imformation {
+      height: 20.125rem;
+
+      .description {
+        left: 1rem;
+        width: calc(100% - 1rem);
+      }
+
       .image {
+        .motto {
+          top: -7.825rem;
+        }
+
         .profile-img {
-          right: 1.25rem;
+          width: 10rem;
+          height: 10rem;
+          bottom: auto;
+          top: -10rem;
+          right: 1rem;
         }
       }
     }

@@ -70,4 +70,12 @@ export default {};
     color: #0056f5;
   }
 }
+
+@media screen and (max-width: 639px) {
+  .footer-container {
+    .content {
+      border-bottom: 0;
+    }
+  }
+}
 </style>

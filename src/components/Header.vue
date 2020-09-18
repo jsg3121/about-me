@@ -61,4 +61,14 @@ export default {
     }
   }
 }
+@media screen and (max-width: 960px) {
+  .header_container {
+    .header_nav {
+      .link {
+        left: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
 </style>
