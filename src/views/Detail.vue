@@ -104,6 +104,7 @@ export default {
   mounted() {
     let list = document.querySelectorAll(".slide_indicate li");
     list[0].classList.add("select");
+    this.listIndex = 0;
   },
   data() {
     return {
@@ -116,11 +117,13 @@ export default {
     prevData: function () {
       if (this.detailIndex > 0) {
         this.detailIndex--;
+        this.resetSlide();
       }
     },
     nextData: function () {
       if (this.detailIndex < this.detailData.length - 1) {
         this.detailIndex++;
+        this.resetSlide();
       }
     },
     prevList: function () {
@@ -145,8 +148,11 @@ export default {
       item.forEach((i) => {
         i.classList.remove("select");
       });
-
       item[this.listIndex].classList.add("select");
+    },
+    resetSlide: function () {
+      this.listIndex = 0;
+      this.activeIndi();
     },
   },
 };

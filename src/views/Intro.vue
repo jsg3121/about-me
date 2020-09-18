@@ -9,12 +9,9 @@
       </div>
       <div class="info_box" id="info_box">
         <h3>찾아주셔서 감사합니다.</h3>
-        <p>Vue.js 를 이용하여 제작하였습니다.</p>
+        <p>이 사이트는 Vue.js 를 이용하여 제작하였습니다.</p>
         <br />
-        <p>
-          이 사이트는 프로젝트를 진행한 경험을 기록하는곳이며
-          <br class="mobile" />프로젝트 진행 상황에 따라 업데이트 될 예정입니다.
-        </p>
+        <p>이 사이트는 프로젝트가 추가될 때 마다 업데이트 될 예정입니다.</p>
         <br />
         <p>
           <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는
@@ -23,7 +20,7 @@
           <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를 확인하실 수 있습니다.
         </p>
         <br />
-        <p class="alert">© 2015 COPIRIGHT. ALL RIGHTS RESERVED</p>
+        <p class="alert">© 2020 COPIRIGHT. ALL RIGHTS RESERVED</p>
         <div class="container-btn">
           <button @click="goMain()">
             들어가기

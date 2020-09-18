@@ -19,14 +19,22 @@ export default new Vuex.Store({
         img_src: [
           {
             id: 1,
-            src: require("../assets/image/toyota_3.png")
+            src: require("../assets/image/toyota_1.png")
           },
           {
             id: 2,
-            src: require("../assets/image/toyota_4.png")
+            src: require("../assets/image/toyota_2.png")
           },
           {
             id: 3,
+            src: require("../assets/image/toyota_3.png")
+          },
+          {
+            id: 4,
+            src: require("../assets/image/toyota_4.png")
+          },
+          {
+            id: 5,
             src: require("../assets/image/toyota_5.png")
           }
         ],
@@ -45,11 +53,12 @@ export default new Vuex.Store({
         date: "2020-08 ~ 2020-09",
         thumbnail: require("../assets/image/culture_thumbnail.png"),
         img_src: [
-          { id: 1, src: require("../assets/image/culture_project_1.webm") },
-          { id: 2, src: require("../assets/image/culture_project_2.png") },
-          { id: 3, src: require("../assets/image/culture_project_3.png") },
-          { id: 4, src: require("../assets/image/culture_project_4.png") },
-          { id: 5, src: require("../assets/image/culture_project_5.png") }
+          { id: 1, src: require("../assets/image/culture_project_1.png") },
+          { id: 2, src: require("../assets/image/culture_project_6.png") },
+          { id: 3, src: require("../assets/image/culture_project_4.png") },
+          { id: 4, src: require("../assets/image/culture_project_5.png") },
+          { id: 5, src: require("../assets/image/culture_project_2.png") },
+          { id: 6, src: require("../assets/image/culture_project_3.png") }
         ],
         skills: [
           { id: 1, skill: "Vue.js" },
