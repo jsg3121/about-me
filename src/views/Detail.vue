@@ -184,6 +184,7 @@ export default {
       .content_title {
         width: 100%;
         max-width: 1280px;
+        height: 100%;
         margin: 0 auto;
         position: relative;
 
@@ -422,6 +423,117 @@ export default {
                 color: #8a8a8a;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .detail-container {
+    .detail-content {
+      .conetnt_background {
+        .content_title {
+          .prev_card,
+          .next_card {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          h1 {
+            font-size: 3rem;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .content_description {
+        margin-bottom: 0;
+        .description {
+          width: 80%;
+          top: 0;
+
+          .description_slide {
+            position: relative;
+
+            .prev_card {
+              position: absolute;
+              left: -2rem;
+              z-index: 15;
+              margin-right: 0;
+            }
+
+            .next_card {
+              position: absolute;
+              right: -2rem;
+              z-index: 15;
+              margin-left: 0;
+            }
+
+            .slide_box {
+              width: 100%;
+              height: 32.5rem;
+
+              .slide_list {
+                .slide_item {
+                  figure {
+                    width: 80vw;
+                    height: 32.5rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .description_text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .detail-container {
+    .detail-content {
+      .conetnt_background {
+        height: 28.5rem;
+        .content_title {
+          .prev_card,
+          .next_card {
+          }
+          h1 {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .content_description {
+        .description {
+          height: 59.9375rem;
+
+          .description_slide {
+            .prev_card {
+            }
+
+            .next_card {
+            }
+
+            .slide_box {
+              height: 27.5rem;
+              .slide_list {
+                .slide_item {
+                  figure {
+                    height: 27.5rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .description_text {
           }
         }
       }

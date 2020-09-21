@@ -177,6 +177,8 @@ export default {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
+
         &.cursor {
           border-right: 2px solid #333333;
         }
@@ -219,25 +221,21 @@ export default {
         }
 
         .item_box {
-          width: 100%;
+          width: 90%;
+          max-width: 1080px;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          justify-content: center;
-          margin-top: 3.125rem;
+          justify-content: space-evenly;
+          margin: 3.125rem auto 0;
 
           .tag_item {
             width: 19.0625rem;
             height: 4.375rem;
             border-radius: 2.1875rem;
             background-color: #ffffff;
-            margin-left: 1.25rem;
-            margin-bottom: 1.25rem;
+            margin: 1.25rem 0.5rem;
             position: relative;
-
-            &:first-child {
-              margin-left: 0;
-            }
 
             &.important {
               background-color: #000f2a;
@@ -352,6 +350,20 @@ export default {
               text-align: right;
               color: #333333;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .about-container {
+    .inner-container {
+      .from_friends {
+        .friends_content {
+          .content_box {
+            margin: 4rem 2rem;
           }
         }
       }

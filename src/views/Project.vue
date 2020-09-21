@@ -316,4 +316,39 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .project-container {
+    .project-list {
+      height: 26rem;
+
+      ul {
+        .list_item {
+          height: 26rem;
+
+          > div {
+            h1 {
+              font-size: 2rem;
+            }
+
+            &.before,
+            &.after {
+              transform: none;
+            }
+          }
+
+          .card1 {
+            width: 100vw;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .next_card:hover,
+      .prev_card:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
 </style>

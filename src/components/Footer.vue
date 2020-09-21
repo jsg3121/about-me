@@ -71,7 +71,7 @@ export default {};
   }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 979px) {
   .footer-container {
     .content {
       width: 80%;
