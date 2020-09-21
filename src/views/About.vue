@@ -10,7 +10,7 @@
       </div>
       <div class="tag_me">
         <div class="tag_content">
-          <h2># 장선규</h2>
+          <h2># 장선규는</h2>
           <div class="item_box">
             <div class="tag_item">
               <div class="text_box">
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="from_friends">
-        <h2>다른사람들이 보는 나</h2>
+        <h2>장선규는 이런사람 입니다!</h2>
         <div class="friends_content">
           <div class="content_box">
             <div class="profile_img"></div>
