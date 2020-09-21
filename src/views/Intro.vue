@@ -115,9 +115,10 @@ export default {
       top: 14.375rem;
       z-index: 1;
       right: 0;
-      width: 0;
+      width: 71.25rem;
+      transform: translateX(100%);
       height: 34rem;
-      transition: width 0.7s;
+      transition: transform 0.7s;
       overflow: hidden;
       white-space: nowrap;
       background-color: #0f48ed;
@@ -209,7 +210,7 @@ export default {
     }
 
     .notice-opening-1 {
-      width: 71.25rem;
+      transform: translateX(0);
     }
 
     .title {
@@ -352,7 +353,7 @@ export default {
       .info_box {
         top: 20rem;
         height: 30rem;
-        width: 0;
+        width: 100%;
 
         h3 {
           margin-top: 2rem;
@@ -382,7 +383,7 @@ export default {
         }
       }
       .notice-opening-1 {
-        width: 100%;
+        transform: translateX(0);
       }
     }
   }

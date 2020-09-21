@@ -235,7 +235,7 @@ export default {};
       height: auto;
 
       .description {
-        left: 1rem;
+        left: 2rem;
         width: calc(100% - 1rem);
         position: relative;
         margin-top: 22rem;
@@ -244,7 +244,7 @@ export default {};
       .image {
         .motto {
           right: 6.5rem;
-          top: 8.175rem;
+          top: 11.175rem;
           width: 26.875rem;
           height: auto;
         }
