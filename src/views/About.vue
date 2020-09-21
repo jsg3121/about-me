@@ -10,7 +10,7 @@
       </div>
       <div class="tag_me">
         <div class="tag_content">
-          <h2># 장선규는</h2>
+          <h2># 장선규는??</h2>
           <div class="item_box">
             <div class="tag_item">
               <div class="text_box">
@@ -132,7 +132,7 @@ export default {
             this.typing += arr[i];
           }, i * 100);
         }
-      }, 1000);
+      }, 700);
 
       setTimeout(() => {
         setInterval(() => {
