@@ -49,6 +49,8 @@ export default {
       }, 200);
       setTimeout(() => {
         document.getElementById("container").classList.add("main-opening-2");
+        document.getElementById("title-1").style.display = "block";
+        document.getElementById("title-2").style.display = "block";
       }, 950);
       setTimeout(() => {
         document.getElementById("title-1").classList.add("title-opening-1");
@@ -66,6 +68,8 @@ export default {
       }, 2350);
       setTimeout(() => {
         document.getElementById("container").classList.remove("main-opening-2");
+        document.getElementById("title-1").style.display = "none";
+        document.getElementById("title-2").style.display = "none";
       }, 1850);
       setTimeout(() => {
         document.getElementById("title-1").classList.remove("title-opening-1");
@@ -222,6 +226,7 @@ export default {
         overflow: hidden;
 
         img {
+          display: none;
           width: 100%;
           user-select: none;
           transition: transform 0.5s;
@@ -230,6 +235,7 @@ export default {
       }
 
       h1 {
+        display: none;
         font-size: 5rem;
         font-weight: 500;
         text-align: left;

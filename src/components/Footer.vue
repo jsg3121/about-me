@@ -74,7 +74,8 @@ export default {};
 @media screen and (max-width: 639px) {
   .footer-container {
     .content {
-      border-bottom: 0;
+      width: 80%;
+      margin: 0 auto 2.0625rem;
     }
   }
 }

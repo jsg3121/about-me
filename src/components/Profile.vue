@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="profile-imformation">
+    <div class="profile-information">
       <div class="description">
         <p>주로 즐겨하던 게임들은 대부분 진행 난이도가 높아 입문하기 어려운 게임 종류였습니다.</p>
         <p>룰을 이해하고 노력한 뒤 발전된 플레이를 하여 한 단계씩 성장하는 캐릭터를 보며 성취감과 뿌듯함을 느낄 수 있기 때문입니다.</p>
@@ -59,7 +59,7 @@ export default {};
         background-color: #000f2a;
         position: absolute;
         top: 19.375rem;
-        left: 0;
+        left: 2rem;
 
         &:after {
           content: "";
@@ -97,7 +97,7 @@ export default {};
       }
     }
   }
-  .profile-imformation {
+  .profile-information {
     width: 100%;
     max-width: 1280px;
     height: 25.125rem;
@@ -140,7 +140,7 @@ export default {};
         height: 16rem;
         position: absolute;
         bottom: 2.25rem;
-        right: 0;
+        right: 2rem;
         z-index: 3;
 
         img {
@@ -152,25 +152,65 @@ export default {};
   }
 }
 
-@media screen and (max-width: 1280px) {
-  .description {
-    left: 1.25rem;
-  }
-  .image {
-    .profile-img {
-      right: 1.25rem;
+@media screen and (max-width: 960px) {
+  .profile-container {
+    .main-information {
+      .title-content {
+        .title-box {
+          width: 332px;
+          height: 300px;
+          top: 28rem;
+          p {
+            margin-top: 87px;
+            margin-left: 25px;
+          }
+          h1 {
+            font-size: 3rem;
+            margin-left: 25px;
+          }
+
+          &:after {
+            bottom: 2.375rem;
+            right: 3.375rem;
+          }
+        }
+      }
+    }
+
+    .profile-information {
+      .description {
+        left: 1.25rem;
+        width: calc(100% - 1.25rem);
+      }
+      .image {
+        .motto {
+          top: 3.875rem;
+          right: 19.75rem;
+        }
+
+        .profile-img {
+          right: 2.25rem;
+          bottom: 14rem;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 639px) {
   .profile-container {
-    height: 70.125rem;
+    height: auto;
+
     .main-information {
+      height: 35rem;
+
       .title-content {
         .title-box {
           width: 249px;
           height: 225px;
+          top: 18rem;
+          left: 2rem;
+          z-index: 15;
 
           &:after {
             bottom: 2rem;
@@ -191,25 +231,30 @@ export default {};
         }
       }
     }
-    .profile-imformation {
-      height: 20.125rem;
+    .profile-information {
+      height: auto;
 
       .description {
         left: 1rem;
         width: calc(100% - 1rem);
+        position: relative;
+        margin-top: 22rem;
       }
 
       .image {
         .motto {
-          top: -7.825rem;
+          right: 6.5rem;
+          top: 8.175rem;
+          width: 26.875rem;
+          height: auto;
         }
 
         .profile-img {
-          width: 10rem;
-          height: 10rem;
+          width: 16rem;
+          height: 16rem;
           bottom: auto;
-          top: -10rem;
-          right: 1rem;
+          top: 2rem;
+          right: 2rem;
         }
       }
     }

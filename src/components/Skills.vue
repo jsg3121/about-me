@@ -326,16 +326,18 @@ export default {
         margin-top: 1.25rem;
 
         .skill_list {
-          justify-content: center;
+          justify-content: flex-start;
           flex-wrap: wrap;
+          width: 80%;
+          margin: 0 auto;
 
           li {
-            width: calc(80% / 3);
-            margin-right: 1rem;
-            margin-bottom: 1rem;
+            width: 50%;
+            margin-right: 0;
+            margin-bottom: 0;
 
             figure {
-              width: 100%;
+              width: 80%;
               height: 100%;
 
               &:after {
@@ -351,22 +353,27 @@ export default {
         width: 100%;
         border-bottom: 1px solid #d7d7d7;
         border-right: 0;
+        height: auto;
+        padding-bottom: 2rem;
 
         .skill_list {
-          justify-content: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 80%;
+          margin: 0 auto;
           height: auto;
 
           li {
-            width: calc(80% / 3);
-            margin-right: 1rem;
-            margin-bottom: 1rem;
+            width: 50%;
+            margin-right: 0;
+            margin-bottom: 0;
 
             figure {
-              width: 100%;
+              width: 80%;
               height: 100%;
 
               &:after {
-                font-size: 1rem;
+                font-size: 1.3rem;
               }
             }
           }

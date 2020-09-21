@@ -24,7 +24,7 @@
                 <p>두원공대 스마트소프트웨어과</p>
               </div>
             </div>
-            <div class="tag_item important">
+            <div class="tag_item">
               <div class="text_box">
                 <p># 병역구분</p>
                 <p>병장 만기전역(의무경찰)</p>
@@ -42,13 +42,13 @@
                 <a href="mailTo:xodm95@gamil.com" target="_blank">xodm95@gamil.com</a>
               </div>
             </div>
-            <div class="tag_item">
+            <div class="tag_item important">
               <div class="text_box">
                 <p># github</p>
                 <a href="https://github.com/jsg3121" target="_blank">https://github.com/jsg3121</a>
               </div>
             </div>
-            <div class="tag_item">
+            <div class="tag_item important">
               <div class="text_box">
                 <p># velog</p>
                 <a href="https://velog.io/@jsg3121" target="_blank">https://velog.io/@jsg3121</a>
@@ -211,10 +211,11 @@ export default {
         padding-top: 6.25rem;
 
         h2 {
-          font-size: 2rem;
+          font-size: 2.25rem;
           font-weight: normal;
           text-align: center;
           color: #333333;
+          font-weight: bold;
         }
 
         .item_box {
@@ -267,10 +268,10 @@ export default {
                 color: #000f2a;
               }
 
-              a {
-                text-decoration: underline;
-                text-underline-position: under;
-              }
+              // a {
+              //   text-decoration: underline;
+              //   text-underline-position: under;
+              // }
             }
           }
         }
@@ -285,11 +286,12 @@ export default {
       padding-top: 6.25rem;
 
       h2 {
-        font-size: 2rem;
+        font-size: 2.25rem;
         font-weight: normal;
         text-align: center;
         color: #333333;
         margin-bottom: 5.5rem;
+        font-weight: bold;
       }
 
       .friends_content {
