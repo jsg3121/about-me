@@ -12,7 +12,7 @@ export default new Vuex.Store({
       {
         projectNum: 1,
         projectName: "Information on Cultural Events",
-        subName: "CultureProject",
+        subName: "Culture Project",
         members: [{ id: 1, member: "1명(frontend, backend 100%)" }],
         date: "2020-08 ~ 2020-09",
         thumbnail: require("../assets/image/culture_thumbnail.png"),

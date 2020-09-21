@@ -10,7 +10,7 @@
       </div>
       <div class="tag_me">
         <div class="tag_content">
-          <h2># 장선규는??</h2>
+          <h2># 자기소개</h2>
           <div class="item_box">
             <div class="tag_item">
               <div class="text_box">
@@ -135,12 +135,12 @@ export default {
       }, 700);
 
       setTimeout(() => {
-        setInterval(() => {
-          let title = document.querySelector(
-            ".about-container .inner-container .title h1"
-          );
-          title.classList.toggle("cursor");
-        }, 700);
+        // setInterval(() => {
+        // }, 700);
+        let title = document.querySelector(
+          ".about-container .inner-container .title h1"
+        );
+        title.classList.remove("cursor");
       }, 2300);
     },
   },
@@ -305,7 +305,7 @@ export default {
           width: 38.75rem;
           height: 21.25rem;
           border-radius: 1.25rem;
-          box-shadow: 0 0 1.35rem 0.15rem rgba(0, 86, 245, 0.14);
+          box-shadow: 0 0 1.35rem 0.15rem rgba(0, 15, 42, 0.14);
           background-color: #ffffff;
           margin-bottom: 5.5625rem;
           position: relative;
@@ -314,7 +314,7 @@ export default {
             width: 8.125rem;
             height: 8.125rem;
             border-radius: 50%;
-            box-shadow: 0 0 1.35rem 0.15rem rgba(0, 15, 42, 0.14);
+            box-shadow: 0 0 1.35rem 0.15rem rgba(0, 86, 245, 0.14);
             background-color: #ffffff;
             position: absolute;
             top: -4.0625rem;
