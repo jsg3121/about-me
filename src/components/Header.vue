@@ -2,8 +2,8 @@
   <div class="header_container">
     <nav class="header_nav" @scroll="scrollHeader()">
       <router-link :to="{name: 'Main'}" class="link">MAIN</router-link>
-      <!-- <a class="link">ABOUT ME</a> -->
       <router-link :to="{name: 'Project'}" class="link">PROJECT</router-link>
+      <router-link :to="{name: 'About'}" class="link">ABOUT ME</router-link>
     </nav>
   </div>
 </template>
@@ -19,9 +19,24 @@ export default {
 
       if (scrollTop > 0) {
         let headerBg = document.querySelector(".header_container");
+        let headerTxt = document.querySelectorAll(
+          ".header_container .header_nav .link"
+        );
+
         headerBg.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+        headerTxt.forEach((txt) => {
+          txt.style.color = "#ffffff";
+        });
       } else if (scrollTop == 0) {
         let headerBg = document.querySelector(".header_container");
+        let headerTxt = document.querySelectorAll(
+          ".header_container .header_nav .link"
+        );
+
+        headerTxt.forEach((txt) => {
+          txt.style.color = "";
+        });
         headerBg.style.backgroundColor = "transparent";
       }
     },

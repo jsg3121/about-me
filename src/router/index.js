@@ -6,6 +6,7 @@ import Intro from "@/views/Intro";
 import Main from "@/views/Main";
 import Project from "@/views/Project";
 import Detail from "@/views/Detail";
+import About from "@/views/About";
 
 Vue.use(Router);
 /* eslint-disable */
@@ -42,6 +43,11 @@ export default new Router({
       path: "/project/detail",
       name: "Detail",
       component: Detail
+    },
+    {
+      path: "/about",
+      name: "About",
+      component: About
     }
   ]
 });
