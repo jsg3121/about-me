@@ -36,7 +36,12 @@
               </ul>
             </div>
             <button class="next_card" @click="nextList"></button>
+            <p
+              class="alert"
+              v-if="detailData[detailIndex].alert != ''"
+            >{{detailData[detailIndex].alert}}</p>
           </div>
+
           <div class="description_text">
             <div>
               <div class="text_title">
@@ -62,10 +67,6 @@
               </div>
               <ul class="text_conetnt">
                 <li>
-                  <p
-                    class="alert"
-                    v-if="detailData[detailIndex].alert != ''"
-                  >{{detailData[detailIndex].alert}}</p>
                   <p>{{detailData[detailIndex].date}}</p>
                 </li>
               </ul>
@@ -345,6 +346,13 @@ export default {
               }
             }
           }
+          .alert {
+            font-size: 0.9rem;
+            position: absolute;
+            bottom: -1.3rem;
+            left: 0;
+            color: #8a8a8a;
+          }
         }
 
         .description_text {
@@ -414,13 +422,6 @@ export default {
                 line-height: 1.4;
                 text-align: center;
                 color: #4d5772;
-              }
-
-              .alert {
-                font-size: 0.75rem;
-                position: absolute;
-                top: -3.5625rem;
-                color: #8a8a8a;
               }
             }
           }
@@ -501,9 +502,6 @@ export default {
       .conetnt_background {
         height: 28.5rem;
         .content_title {
-          .prev_card,
-          .next_card {
-          }
           h1 {
             font-size: 2.5rem;
           }
@@ -515,12 +513,6 @@ export default {
           height: 59.9375rem;
 
           .description_slide {
-            .prev_card {
-            }
-
-            .next_card {
-            }
-
             .slide_box {
               height: 27.5rem;
               .slide_list {
@@ -531,9 +523,33 @@ export default {
                 }
               }
             }
+            .alert {
+              font-size: 1rem;
+              position: absolute;
+              bottom: -1.3rem;
+              left: 0;
+              color: #8a8a8a;
+            }
           }
-
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  .detail-container {
+    .detail-content {
+      .content_description {
+        .description {
           .description_text {
+            .text_conetnt {
+              li {
+                p {
+                  width: 70%;
+                  margin: 0 auto;
+                }
+              }
+            }
           }
         }
       }

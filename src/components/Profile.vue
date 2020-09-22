@@ -152,7 +152,7 @@ export default {};
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
   .profile-container {
     .main-information {
       .title-content {
@@ -236,7 +236,7 @@ export default {};
 
       .description {
         left: 2rem;
-        width: calc(100% - 1rem);
+        width: calc(100% - 2.5rem);
         position: relative;
         margin-top: 22rem;
       }

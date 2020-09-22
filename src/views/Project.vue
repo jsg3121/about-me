@@ -338,7 +338,7 @@ export default {
           }
 
           .card1 {
-            width: 100vw;
+            width: 90vw;
             margin: 0 auto;
           }
         }

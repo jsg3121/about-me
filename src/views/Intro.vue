@@ -370,6 +370,7 @@ export default {
           height: 4.8rem;
           left: 50%;
           transform: translateX(-50%);
+          bottom: 4rem;
 
           button {
             font-size: 1.5rem;

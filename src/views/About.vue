@@ -11,47 +11,49 @@
       <div class="tag_me">
         <div class="tag_content">
           <h2># 자기소개</h2>
-          <div class="item_box">
-            <div class="tag_item">
-              <div class="text_box">
-                <p># 생년월일</p>
-                <p>1995년 08월 09일</p>
+          <div class="scroll_box">
+            <div class="item_box">
+              <div class="tag_item">
+                <div class="text_box">
+                  <p># 생년월일</p>
+                  <p>1995년 08월 09일</p>
+                </div>
               </div>
-            </div>
-            <div class="tag_item">
-              <div class="text_box">
-                <p># 학력</p>
-                <p>두원공대 스마트소프트웨어과</p>
+              <div class="tag_item">
+                <div class="text_box">
+                  <p># 학력</p>
+                  <p>두원공대 스마트소프트웨어과</p>
+                </div>
               </div>
-            </div>
-            <div class="tag_item">
-              <div class="text_box">
-                <p># 병역구분</p>
-                <p>병장 만기전역(의무경찰)</p>
+              <div class="tag_item">
+                <div class="text_box">
+                  <p># 병역구분</p>
+                  <p>병장 만기전역(의무경찰)</p>
+                </div>
               </div>
-            </div>
-            <div class="tag_item important">
-              <div class="text_box">
-                <p># 자격증</p>
-                <p>정보처리산업기사</p>
+              <div class="tag_item important">
+                <div class="text_box">
+                  <p># 자격증</p>
+                  <p>정보처리산업기사</p>
+                </div>
               </div>
-            </div>
-            <div class="tag_item important">
-              <div class="text_box">
-                <p># Email</p>
-                <a href="mailTo:xodm95@gamil.com" target="_blank">xodm95@gamil.com</a>
+              <div class="tag_item important">
+                <div class="text_box">
+                  <p># Email</p>
+                  <a href="mailTo:xodm95@gamil.com" target="_blank">xodm95@gamil.com</a>
+                </div>
               </div>
-            </div>
-            <div class="tag_item important">
-              <div class="text_box">
-                <p># github</p>
-                <a href="https://github.com/jsg3121" target="_blank">https://github.com/jsg3121</a>
+              <div class="tag_item important">
+                <div class="text_box">
+                  <p># github</p>
+                  <a href="https://github.com/jsg3121" target="_blank">https://github.com/jsg3121</a>
+                </div>
               </div>
-            </div>
-            <div class="tag_item important">
-              <div class="text_box">
-                <p># velog</p>
-                <a href="https://velog.io/@jsg3121" target="_blank">https://velog.io/@jsg3121</a>
+              <div class="tag_item important">
+                <div class="text_box">
+                  <p># velog</p>
+                  <a href="https://velog.io/@jsg3121" target="_blank">https://velog.io/@jsg3121</a>
+                </div>
               </div>
             </div>
           </div>
@@ -220,56 +222,58 @@ export default {
           font-weight: bold;
         }
 
-        .item_box {
-          width: 90%;
-          max-width: 1080px;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-evenly;
-          margin: 3.125rem auto 0;
+        .scroll_box {
+          .item_box {
+            width: 90%;
+            max-width: 1080px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 3.125rem auto 0;
 
-          .tag_item {
-            width: 19.0625rem;
-            height: 4.375rem;
-            border-radius: 2.1875rem;
-            background-color: #ffffff;
-            margin: 1.25rem 0.5rem;
-            position: relative;
+            .tag_item {
+              width: 19.0625rem;
+              height: 4.375rem;
+              border-radius: 2.1875rem;
+              background-color: #ffffff;
+              margin: 1.25rem 0.5rem;
+              position: relative;
 
-            &.important {
-              background-color: #000f2a;
+              &.important {
+                background-color: #000f2a;
 
-              .text_box {
-                p,
-                a {
-                  color: #ffffff;
+                .text_box {
+                  p,
+                  a {
+                    color: #ffffff;
+                  }
                 }
               }
-            }
 
-            .text_box {
-              width: 15.3125rem;
-              height: 3.125rem;
-              text-align: center;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-
-              p,
-              a {
-                font-size: 1.125rem;
-                font-weight: normal;
+              .text_box {
+                width: 15.3125rem;
+                height: 3.125rem;
                 text-align: center;
-                line-height: 1.5;
-                color: #000f2a;
-              }
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
-              // a {
-              //   text-decoration: underline;
-              //   text-underline-position: under;
-              // }
+                p,
+                a {
+                  font-size: 1.125rem;
+                  font-weight: normal;
+                  text-align: center;
+                  line-height: 1.5;
+                  color: #000f2a;
+                }
+
+                // a {
+                //   text-decoration: underline;
+                //   text-underline-position: under;
+                // }
+              }
             }
           }
         }
@@ -357,13 +361,51 @@ export default {
   }
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 959px) {
   .about-container {
     .inner-container {
+      .tag_me {
+        // .tag_content {
+        //   .scroll_box {
+        //     overflow-x: scroll;
+        //     width: 90%;
+        //     margin: 0 auto;
+        //     .item_box {
+        //       width: max-content;
+        //       flex-wrap: nowrap;
+        //       overflow: hidden;
+        //       max-width: initial;
+        //     }
+        //   }
+        // }
+      }
+
       .from_friends {
         .friends_content {
           .content_box {
             margin: 4rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .about-container {
+    .inner-container {
+      .tag_me {
+        .tag_content {
+          .scroll_box {
+            overflow-x: scroll;
+            width: 90%;
+            margin: 0 auto;
+            .item_box {
+              width: max-content;
+              flex-wrap: nowrap;
+              overflow: hidden;
+              max-width: initial;
+            }
           }
         }
       }
