@@ -541,8 +541,14 @@ export default {
     .detail-content {
       .content_description {
         .description {
+          height: auto;
+
           .description_text {
+            flex-wrap: wrap;
             .text_conetnt {
+              min-height: auto;
+              margin-bottom: 6rem;
+
               li {
                 p {
                   width: 70%;

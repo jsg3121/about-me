@@ -96,20 +96,23 @@
                 반영이 어려운 부분은 충분한 설명을 통해 디자이너를 이해시키
                 며, 다른 방법으로 진행할 수 있는 방향성을 제시해주기도 합니다.
               </p>
-              <h5>금뫄뫄 / 디자이너 / 팀 프로젝트 팀원</h5>
+              <h5>금혜주 전임 / 디자이너 / (주)크리섹터</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <vueFooter></vueFooter>
   </div>
 </template>
 
 <script>
 import vueHeader from "../components/Header";
+import vueFooter from "../components/Footer";
 export default {
   components: {
     vueHeader,
+    vueFooter,
   },
   data() {
     return {
@@ -271,6 +274,7 @@ export default {
       width: 100%;
       position: relative;
       padding-top: 6.25rem;
+      margin-bottom: 10rem;
 
       h2 {
         font-size: 2.25rem;
@@ -366,6 +370,7 @@ export default {
       .title {
         h1 {
           line-height: 1.4;
+          width: 360px;
         }
 
         figure {
@@ -380,7 +385,7 @@ export default {
               width: auto;
               height: auto;
               padding: 0.3rem 1.1rem;
-              margin: 0.55rem 0rem;
+              margin: 0.55rem 0.5rem;
 
               .text_box {
                 p:first-child {
@@ -400,6 +405,19 @@ export default {
                 }
               }
             }
+          }
+        }
+      }
+
+      .from_friends {
+        padding-top: 9.45rem;
+        h2 {
+          margin-bottom: 3rem;
+        }
+
+        .friends_content {
+          .content_box {
+            margin: 3.2rem 2rem;
           }
         }
       }

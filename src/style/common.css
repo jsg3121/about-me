@@ -6,6 +6,10 @@
     .mobile-sm {
         display: none !important;
     }
+
+    .mx-sm{
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 979px) {
@@ -16,9 +20,13 @@
     .mobile-sm {
         display: none !important;
     }
+    
+    .mx-sm{
+        display: none !important;
+    }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 479px) {
     .pc {
         display: none !important;
     }
@@ -29,6 +37,10 @@
 
     .mobile-sm {
         display: block !important;
+    }
+    
+    .mx-sm{
+        display: none !important;
     }
 }
 

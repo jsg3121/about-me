@@ -125,9 +125,9 @@ export default {
 
       h3 {
         color: #efefef;
-        margin-top: 6.25rem;
+        margin-top: 7.5rem;
         margin-left: 3.8125rem;
-        margin-bottom: 1.8125rem;
+        margin-bottom: 3.5875rem;
         font-size: 2.125rem;
         font-weight: normal;
         text-align: left;
