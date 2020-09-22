@@ -317,11 +317,21 @@ export default {
   }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
   .skills-container {
     padding-top: 3rem;
 
     .inner-container {
+      > div {
+        > h4 {
+          font-size: 1.8rem;
+          margin-left: 0;
+          text-align: center;
+          margin-bottom: 2.875rem;
+          padding-top: 2.8125rem;
+        }
+      }
+
       .front-end {
         margin-top: 1.25rem;
 
@@ -381,6 +391,7 @@ export default {
       }
 
       .etc {
+        border-bottom: 0;
         height: auto;
       }
     }

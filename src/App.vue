@@ -8,7 +8,9 @@ import "./style/font.css";
 import "./style/reset.css";
 import "./style/common.css";
 
-export default {};
+export default {
+  created() {},
+};
 </script>
 <style lang="scss">
 </style>

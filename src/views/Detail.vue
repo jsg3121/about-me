@@ -53,7 +53,7 @@
               </div>
               <ul class="text_conetnt">
                 <li v-for="list in detailData[detailIndex].members" :key="list.id">
-                  <p>{{list.member}}</p>
+                  <p v-html="list.member"></p>
                 </li>
               </ul>
             </div>

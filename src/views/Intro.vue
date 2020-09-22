@@ -15,9 +15,13 @@
         <br />
         <p>
           <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는
-          <br class="mobile" />화면이 제대로 표시되지 않을 수 있습니다.
+          <br class="mobile mobile-sm" />화면이 제대로 표시되지 않을 수 있습니다.
           <br />
-          <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를 확인하실 수 있습니다.
+        </p>
+        <br />
+        <p>
+          <span>크롬(Chrome)</span>브라우저에서 가장 정확한 내용의 컨텐츠를
+          <br class="mobile-sm" />확인하실 수 있습니다.
         </p>
         <br />
         <p class="alert">© 2020 COPIRIGHT. ALL RIGHTS RESERVED</p>

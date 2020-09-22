@@ -13,7 +13,7 @@ export default new Vuex.Store({
         projectNum: 1,
         projectName: "Information on Cultural Events",
         subName: "Culture Project",
-        members: [{ id: 1, member: "1명(frontend, backend 100%)" }],
+        members: [{ id: 1, member: "1명<br>(frontend, backend 100%)" }],
         date: "2020-08 ~ 2020-09",
         thumbnail: require("../assets/image/culture_thumbnail.png"),
         img_src: [
@@ -36,7 +36,7 @@ export default new Vuex.Store({
         projectNum: 2,
         projectName: "Prius C Crossover Detail page",
         subName: "Toyota",
-        members: [{ id: 1, member: "1명(Frontend 100%)" }],
+        members: [{ id: 1, member: "1명<br>(Frontend 100%)" }],
         date: "2020-01 ~ 2020-03",
         thumbnail: require("../assets/image/toyota_thumbnail.png"),
         img_src: [
@@ -73,7 +73,7 @@ export default new Vuex.Store({
         projectName: "Kisan Management System",
         subName: "KISAN",
         date: "2020-06 ~ 2020-08",
-        members: [{ id: 1, member: "1명(화면 및 기능구현)" }],
+        members: [{ id: 1, member: "1명<br>(화면 및 기능구현)" }],
         thumbnail: require("../assets/image/kisan_thumbnail.png"),
         img_src: [
           {

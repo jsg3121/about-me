@@ -16,12 +16,15 @@
           <br class="mx-sm" />입문하기 어려운 게임 종류였습니다.
         </p>
         <p>
-          룰을 이해하고 노력한 뒤 발전된 플레이를 하여 한 단계씩 성장하는 캐릭터를 보며
-          <br class="mobile-sm" />성취감과 뿌듯함을 느낄 수 있기 때문입니다.
+          룰을 이해하고 노력한 뒤 발전된 플레이를 하여 한 단계씩 성장하는
+          <br class="mobile-sm" />캐릭터를 보며 성취감과 뿌듯함을 느낄 수 있기 때문입니다.
         </p>
         <br class="mobile-sm" />
-        <p>개발이란 과정도 목표를 향해 이해하고 시도하며 성장해 완성된 결과물을 보았을 때</p>
-        <p>다가오는 성취감과 뿌듯함은 게임을 할 때와 같이 매우 소중합니다.</p>
+        <p>
+          개발이란 과정도 목표를 향해 이해하고 시도하며 성장해,
+          <br class="mobile-sm" />완성된 결과물을 보았을 때 다가오는 성취감과 뿌듯함은
+          <br class="mobile-sm" />게임을 할 때와 같이 매우 소중합니다.
+        </p>
         <br />
         <p>
           여러 경험들을 거쳐 이제는 아무것도 없는 공간에,
@@ -165,7 +168,7 @@ export default {};
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 960px) {
   .profile-container {
     .main-information {
       .title-content {
@@ -210,7 +213,7 @@ export default {};
   }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
   .profile-container {
     height: auto;
 
@@ -255,6 +258,7 @@ export default {};
 
         p {
           letter-spacing: -0.3px;
+          font-size: 1.2rem;
         }
       }
 
@@ -278,7 +282,7 @@ export default {};
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
   .profile-container {
     .profile-information {
       .description {
