@@ -152,7 +152,7 @@ export default {
         &.alert {
           position: absolute;
           right: 0.75rem;
-          bottom: 0.2rem;
+          bottom: 0.875rem;
           margin-left: 1.05rem;
           margin-top: 0;
           font-size: 0.75rem;
@@ -180,7 +180,7 @@ export default {
         background-color: #ffffff;
         position: absolute;
         left: 3.8125rem;
-        bottom: 1.875rem;
+        bottom: 3rem;
 
         button {
           border: 0;
