@@ -61,7 +61,9 @@
         <h2>장선규는 이런사람 입니다!</h2>
         <div class="friends_content">
           <div class="content_box">
-            <div class="profile_img"></div>
+            <figure class="profile_img">
+              <img src="../assets/image/about_img_sample.png" alt />
+            </figure>
             <div class="text_box">
               <p>
                 자신의 맡은 일을 충실히 수행하는 친구입니다.
@@ -71,21 +73,23 @@
               <h5>이건우 사원 / 개발자 / DK BMC</h5>
             </div>
           </div>
-          <!-- <div class="content_box">
-            <div class="profile_img"></div>
+          <div class="content_box">
+            <figure class="profile_img">
+              <img src="../assets/image/about_img_sample.png" alt />
+            </figure>
             <div class="text_box">
               <p>
-                협업에 대한 마인드가 열려있는 직원.
-                개발적인 내용을 잘 몰라 얼렁뚱땅 설명하여도 불평없이 잘 수용
-                하여 개발에 반영해 주었던 팀원 입니다.
-                반영이 어려운 부분은 충분한 설명을 통해 디자이너를 이해시키며,
-                다른 방법으로 진행할 수 있는 방향성을 제시해주기도 합니다.
+                장선규 팀원은 자기가 맡은 일에 적극적이면서 책임감을 느끼며
+                프로젝트 팀원 간의 커뮤니케이션이 좋아 팀원들에 의사소통을 책임짐,
+                화면 설계에 대한 이해도가 높고 항상 새로운 기술들을 습득하려고 하여 프로젝트에서 좋은 결과 냄
               </p>
-              <h5>금뫄뫄 / 디자이너 / 팀 프로젝트 팀원</h5>
+              <h5>류성필 주임 / 개발자 / 솔루비스</h5>
             </div>
-          </div>-->
+          </div>
           <div class="content_box">
-            <div class="profile_img"></div>
+            <figure class="profile_img">
+              <img src="../assets/image/about_img_1.png" alt />
+            </figure>
             <div class="text_box">
               <p>
                 협업에 대한 마인드가 열려있는 직원.
@@ -314,6 +318,12 @@ export default {
             position: absolute;
             top: -4.0625rem;
             right: 1.875rem;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
 
           .text_box {
