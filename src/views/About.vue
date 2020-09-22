@@ -394,6 +394,16 @@ export default {
 @media screen and (max-width: 639px) {
   .about-container {
     .inner-container {
+      .title {
+        h1 {
+          line-height: 1.4;
+        }
+
+        figure {
+          top: calc(50% + 5.0625rem);
+        }
+      }
+
       .tag_me {
         .tag_content {
           .scroll_box {
