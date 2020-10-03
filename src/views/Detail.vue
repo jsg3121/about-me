@@ -466,6 +466,10 @@ export default {
           .next_card {
             top: 50%;
             transform: translateY(-50%);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.3);
+            }
           }
           h1 {
             font-size: 3rem;
