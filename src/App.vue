@@ -7,6 +7,7 @@
 import "./style/font.css";
 import "./style/reset.css";
 import "./style/common.css";
+// 사이트 속도 체크 관련 코드
 (function (j, en, ni, fer) {
   j["dmndata"] = [];
   j["jenniferFront"] = function (args) {
@@ -22,11 +23,26 @@ import "./style/common.css";
   a.async = true;
   en.getElementsByTagName(ni)[0].parentNode.appendChild(a);
 })(window, document, "script", "64cc2450");
+// 사이트 속도 체크 관련 코드
 
-console.log("ASDF");
 export default {
-  created() {},
+  created() {
+    let agent = navigator.userAgent.toLowerCase();
+    if (
+      (navigator.appName == "Netscape" && agent.indexOf("trident") != -1) ||
+      agent.indexOf("msie") != -1
+    ) {
+      alert("edge 또는 chrome에서 확인해주시기 부탁드립니다.");
+      top.window.opener = top;
+      top.window.open("", "_parent", "");
+      top.window.close();
+    } else {
+    }
+  },
 };
 </script>
 <style lang="scss">
+#app {
+  overflow: hidden;
+}
 </style>

@@ -3,7 +3,12 @@
     <div class="container" id="container">
       <div class="title">
         <figure>
-          <img id="title-1" src="../assets/image/title.png" alt="title" draggable="false" />
+          <img
+            id="title-1"
+            src="../assets/image/title.png"
+            alt="title"
+            draggable="false"
+          />
         </figure>
         <h1 id="title-2">2020</h1>
       </div>
@@ -14,8 +19,8 @@
         <p>이 사이트는 프로젝트가 추가될 때 마다 업데이트 될 예정입니다.</p>
         <br />
         <p>
-          <span>IE(Internet Explorer) 11버전 미만의 브라우저</span>에서는
-          <br class="mobile mobile-sm" />화면이 제대로 표시되지 않을 수 있습니다.
+          <span>이 사이트는 Crome, Edge, Whale브라우저에 </span>
+          <br class="mobile mobile-sm" />최적화 되어있습니다.
           <br />
         </p>
         <br />

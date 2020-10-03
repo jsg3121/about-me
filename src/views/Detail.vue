@@ -4,11 +4,16 @@
     <div class="detail-content">
       <div
         class="conetnt_background"
-        :style="{background: 'url('+ detailData[detailIndex].thumbnail +') top/cover no-repeat'}"
+        :style="{
+          background:
+            'url(' +
+            detailData[detailIndex].thumbnail +
+            ') top/cover no-repeat',
+        }"
       >
         <div class="content_title">
           <button class="prev_card" @click="prevData"></button>
-          <h1>{{detailData[detailIndex].projectName}}</h1>
+          <h1>{{ detailData[detailIndex].projectName }}</h1>
           <button class="next_card" @click="nextData"></button>
         </div>
       </div>
@@ -17,7 +22,10 @@
           <div class="description_slide">
             <button class="prev_card" @click="prevList"></button>
             <div class="slide_box">
-              <ul class="slide_list" :style="{transform: 'translateX(-'+(listIndex * 100)+'%)'}">
+              <ul
+                class="slide_list"
+                :style="{ transform: 'translateX(-' + listIndex * 100 + '%)' }"
+              >
                 <li
                   class="slide_item"
                   v-for="item in detailData[detailIndex].img_src"
@@ -30,16 +38,25 @@
               </ul>
               <ul
                 class="slide_indicate"
-                :style="{width : ((12 * detailData[detailIndex].img_src.length) + (15 * (detailData[detailIndex].img_src.length - 1)) + 12) / 16 + 'rem'} "
+                :style="{
+                  width:
+                    (12 * detailData[detailIndex].img_src.length +
+                      15 * (detailData[detailIndex].img_src.length - 1) +
+                      12) /
+                      16 +
+                    'rem',
+                }"
               >
-                <li v-for="list in detailData[detailIndex].img_src" :key="list.id"></li>
+                <li
+                  v-for="list in detailData[detailIndex].img_src"
+                  :key="list.id"
+                ></li>
               </ul>
             </div>
             <button class="next_card" @click="nextList"></button>
-            <p
-              class="alert"
-              v-if="detailData[detailIndex].alert != ''"
-            >{{detailData[detailIndex].alert}}</p>
+            <p class="alert" v-if="detailData[detailIndex].alert != ''">
+              {{ detailData[detailIndex].alert }}
+            </p>
           </div>
 
           <div class="description_text">
@@ -52,7 +69,10 @@
                 <h4>Team Members</h4>
               </div>
               <ul class="text_conetnt">
-                <li v-for="list in detailData[detailIndex].members" :key="list.id">
+                <li
+                  v-for="list in detailData[detailIndex].members"
+                  :key="list.id"
+                >
                   <p v-html="list.member"></p>
                 </li>
               </ul>
@@ -67,7 +87,7 @@
               </div>
               <ul class="text_conetnt">
                 <li>
-                  <p>{{detailData[detailIndex].date}}</p>
+                  <p>{{ detailData[detailIndex].date }}</p>
                 </li>
               </ul>
             </div>
@@ -80,8 +100,11 @@
                 <h4>Skills</h4>
               </div>
               <ul class="text_conetnt">
-                <li v-for="list in detailData[detailIndex].skills" :key="list.id">
-                  <p>{{list.skill}}</p>
+                <li
+                  v-for="list in detailData[detailIndex].skills"
+                  :key="list.id"
+                >
+                  <p>{{ list.skill }}</p>
                 </li>
               </ul>
             </div>
@@ -277,8 +300,11 @@ export default {
             .slide_list {
               display: flex;
               transition: transform 0.4s;
+              height: 100%;
 
               .slide_item {
+                width: 100%;
+                height: 100%;
                 figure {
                   width: 67.5rem;
                   height: 37.5rem;
@@ -479,8 +505,12 @@ export default {
               .slide_list {
                 .slide_item {
                   figure {
-                    width: 80vw;
-                    height: 32.5rem;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                      width: 80vw;
+                      height: 100%;
+                    }
                   }
                 }
               }
