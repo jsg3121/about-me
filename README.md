@@ -20,29 +20,28 @@
 
   ### Beginner
   
-  *Vue.js 
-  *Vuex
+  * Vue.js 
+  * Vuex
   
   ### Intermediate
   
-  *HTML5
-  *CSS3, SCSS
-  *JanaScript, Jquery
+  * HTML5
+  * CSS3, SCSS
+  * JanaScript, Jquery
 
 ## Backend
 
   ### Beginner
   
-  *Node.js
-  *Express.js
-  *Apache Tomcat
+  * Node.js
+  * Express.js
+  * Apache Tomcat
   
   ### Intermediate
   
-  *JAVA
-  *Oracle
-  *Spring
-  
+  * JAVA
+  * Oracle
+  * Spring
   
 ## ETC
 
