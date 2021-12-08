@@ -1,14 +1,14 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
 // import Home from "@/views/Home";
 // import About from "@/views/About";
-import Intro from "@/views/Intro";
-import Main from "@/views/Main";
-import Project from "@/views/Project";
-import Detail from "@/views/Detail";
-import About from "@/views/About";
+import Intro from '@/views/Intro'
+import Main from '@/views/Main'
+import Project from '@/views/Project'
+import Detail from '@/views/Detail'
+import About from '@/views/About'
 
-Vue.use(Router);
+Vue.use(Router)
 /* eslint-disable */
 export default new Router({
   // mode: "history",

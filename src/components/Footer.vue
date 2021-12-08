@@ -16,13 +16,13 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss">
 .footer-container {
   width: 100%;
-  height: 21.4375rem;
+  height: 20rem;
   background-color: #1a2840;
   position: absolute;
   z-index: 100;
@@ -32,7 +32,7 @@ export default {};
     max-width: 1280px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 3.625rem;
+    padding-top: 3rem;
     padding-bottom: 1.4375rem;
     margin-bottom: 2.0625rem;
     border-bottom: solid 1px #808692;

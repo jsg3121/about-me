@@ -109,47 +109,47 @@
 </template>
 
 <script>
-import vueHeader from "../components/Header";
-import vueFooter from "../components/Footer";
+import vueHeader from '../components/Header'
+import vueFooter from '../components/Footer'
 export default {
   components: {
     vueHeader,
-    vueFooter,
+    vueFooter
   },
-  data() {
+  data () {
     return {
       scroll: false,
-      typing: "",
-    };
+      typing: ''
+    }
   },
-  mounted() {
-    this.typoWrite();
+  mounted () {
+    this.typoWrite()
   },
   methods: {
     typoWrite: function () {
-      this.typing = "";
-      const txtKo = "우린 답을 찾을 것이다. 늘 그랬듯이.";
+      this.typing = ''
+      const txtKo = '우린 답을 찾을 것이다. 늘 그랬듯이.'
 
-      let arr = txtKo.split("");
+      const arr = txtKo.split('')
       setTimeout(() => {
         for (let i = 0; i < arr.length; i++) {
           setTimeout(() => {
-            this.typing += arr[i];
-          }, i * 100);
+            this.typing += arr[i]
+          }, i * 100)
         }
-      }, 700);
+      }, 700)
 
       setTimeout(() => {
         // setInterval(() => {
         // }, 700);
-        let title = document.querySelector(
-          ".about-container .inner-container .title h1"
-        );
-        title.classList.remove("cursor");
-      }, 2300);
-    },
-  },
-};
+        const title = document.querySelector(
+          '.about-container .inner-container .title h1'
+        )
+        title.classList.remove('cursor')
+      }, 2300)
+    }
+  }
+}
 </script>
 
 <style lang="scss">

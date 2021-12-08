@@ -117,44 +117,44 @@
 </template>
 
 <script>
-import vueHeader from "../components/Header";
-import vueFooter from "../components/Footer";
+import vueHeader from '../components/Header'
+import vueFooter from '../components/Footer'
 export default {
   components: {
     vueHeader,
-    vueFooter,
+    vueFooter
   },
-  created() {},
-  mounted() {
-    let list = document.querySelectorAll(".slide_indicate li");
-    list[0].classList.add("select");
-    this.listIndex = 0;
+  created () {},
+  mounted () {
+    const list = document.querySelectorAll('.slide_indicate li')
+    list[0].classList.add('select')
+    this.listIndex = 0
   },
-  data() {
+  data () {
     return {
       listIndex: 0,
       detailIndex: this.$store.state.dataIndex,
-      detailData: this.$store.state.project,
-    };
+      detailData: this.$store.state.project
+    }
   },
   methods: {
     prevData: function () {
       if (this.detailIndex > 0) {
-        this.detailIndex--;
-        this.resetSlide();
+        this.detailIndex--
+        this.resetSlide()
       }
     },
     nextData: function () {
       if (this.detailIndex < this.detailData.length - 1) {
-        this.detailIndex++;
-        this.resetSlide();
+        this.detailIndex++
+        this.resetSlide()
       }
     },
     prevList: function () {
       if (this.listIndex > 0) {
-        this.listIndex--;
-        console.log(this.listIndex);
-        this.activeIndi();
+        this.listIndex--
+        console.log(this.listIndex)
+        this.activeIndi()
       }
     },
     nextList: function () {
@@ -162,24 +162,24 @@ export default {
         this.listIndex <
         this.detailData[this.detailIndex].img_src.length - 1
       ) {
-        this.listIndex++;
-        console.log(this.listIndex);
-        this.activeIndi();
+        this.listIndex++
+        console.log(this.listIndex)
+        this.activeIndi()
       }
     },
     activeIndi: function () {
-      let item = document.querySelectorAll(".slide_indicate li");
+      const item = document.querySelectorAll('.slide_indicate li')
       item.forEach((i) => {
-        i.classList.remove("select");
-      });
-      item[this.listIndex].classList.add("select");
+        i.classList.remove('select')
+      })
+      item[this.listIndex].classList.add('select')
     },
     resetSlide: function () {
-      this.listIndex = 0;
-      this.activeIndi();
-    },
-  },
-};
+      this.listIndex = 0
+      this.activeIndi()
+    }
+  }
+}
 </script>
 
 <style lang="scss">

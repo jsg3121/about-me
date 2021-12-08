@@ -10,7 +10,7 @@
             draggable="false"
           />
         </figure>
-        <h1 id="title-2">2020</h1>
+        <h1 id="title-2">2021</h1>
       </div>
       <div class="info_box" id="info_box">
         <h3>찾아주셔서 감사합니다.</h3>
@@ -45,61 +45,61 @@
 
 <script>
 export default {
-  created() {
-    this.intro();
+  created () {
+    this.intro()
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
   methods: {
-    intro() {
+    intro () {
       setTimeout(() => {
-        document.getElementById("container").classList.add("main-opening-1");
-      }, 200);
+        document.getElementById('container').classList.add('main-opening-1')
+      }, 200)
       setTimeout(() => {
-        document.getElementById("container").classList.add("main-opening-2");
-        document.getElementById("title-1").style.display = "block";
-        document.getElementById("title-2").style.display = "block";
-      }, 950);
+        document.getElementById('container').classList.add('main-opening-2')
+        document.getElementById('title-1').style.display = 'block'
+        document.getElementById('title-2').style.display = 'block'
+      }, 950)
       setTimeout(() => {
-        document.getElementById("title-1").classList.add("title-opening-1");
-      }, 1850);
+        document.getElementById('title-1').classList.add('title-opening-1')
+      }, 1850)
       setTimeout(() => {
-        document.getElementById("title-2").classList.add("title-opening-2");
-      }, 1950);
+        document.getElementById('title-2').classList.add('title-opening-2')
+      }, 1950)
       setTimeout(() => {
-        document.getElementById("info_box").classList.add("notice-opening-1");
-      }, 2000);
+        document.getElementById('info_box').classList.add('notice-opening-1')
+      }, 2000)
     },
     goMain: function () {
       setTimeout(() => {
-        document.getElementById("container").classList.remove("main-opening-1");
-      }, 2350);
+        document.getElementById('container').classList.remove('main-opening-1')
+      }, 2350)
       setTimeout(() => {
-        document.getElementById("container").classList.remove("main-opening-2");
-        document.getElementById("title-1").style.display = "none";
-        document.getElementById("title-2").style.display = "none";
-      }, 1850);
+        document.getElementById('container').classList.remove('main-opening-2')
+        document.getElementById('title-1').style.display = 'none'
+        document.getElementById('title-2').style.display = 'none'
+      }, 1850)
       setTimeout(() => {
-        document.getElementById("title-1").classList.remove("title-opening-1");
-      }, 1250);
+        document.getElementById('title-1').classList.remove('title-opening-1')
+      }, 1250)
       setTimeout(() => {
-        document.getElementById("title-2").classList.remove("title-opening-2");
-      }, 950);
+        document.getElementById('title-2').classList.remove('title-opening-2')
+      }, 950)
       setTimeout(() => {
         document
-          .getElementById("info_box")
-          .classList.remove("notice-opening-1");
-      }, 200);
+          .getElementById('info_box')
+          .classList.remove('notice-opening-1')
+      }, 200)
 
       setTimeout(() => {
         this.$router.push({
-          name: "Main",
-        });
-      }, 2950);
-    },
-  },
-};
+          name: 'Main'
+        })
+      }, 2950)
+    }
+  }
+}
 </script>
 
 <style lang="scss">

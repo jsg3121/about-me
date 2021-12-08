@@ -26,100 +26,100 @@
 </template>
 
 <script>
-import vueHeader from "../components/Header";
+import vueHeader from '../components/Header'
 export default {
   components: {
-    vueHeader,
+    vueHeader
   },
-  created() {
-    this.index = Math.floor(this.$store.state.project.length / 2);
+  created () {
+    this.index = Math.floor(this.$store.state.project.length / 2)
   },
-  mounted() {
-    let list = document.querySelectorAll(".card_list .list_item");
-    list[this.index - 1].childNodes[0].classList.add("before");
-    list[this.index].childNodes[0].classList.add("now");
-    list[this.index + 1].childNodes[0].classList.add("after");
+  mounted () {
+    const list = document.querySelectorAll('.card_list .list_item')
+    list[this.index - 1].childNodes[0].classList.add('before')
+    list[this.index].childNodes[0].classList.add('now')
+    list[this.index + 1].childNodes[0].classList.add('after')
   },
-  data() {
+  data () {
     return {
       index: 0,
       transform: 0,
       margin: 0,
       doubleclick: true,
-      project: this.$store.state.project,
-    };
+      project: this.$store.state.project
+    }
   },
   methods: {
     prevCard: function () {
       if (this.index > 0 && this.doubleclick) {
-        this.doubleclick = false;
-        let list = document.querySelectorAll(".card_list .list_item");
-        this.index--;
+        this.doubleclick = false
+        const list = document.querySelectorAll('.card_list .list_item')
+        this.index--
 
-        this.transform += 100;
-        this.margin += 2.5;
+        this.transform += 100
+        this.margin += 2.5
 
         if (list[this.index - 1] != null) {
-          list[this.index - 1].childNodes[0].classList.add("before");
+          list[this.index - 1].childNodes[0].classList.add('before')
         }
 
-        list[this.index].childNodes[0].classList.remove("before");
-        list[this.index].childNodes[0].classList.add("now");
+        list[this.index].childNodes[0].classList.remove('before')
+        list[this.index].childNodes[0].classList.add('now')
 
-        list[this.index + 1].childNodes[0].classList.remove("now");
-        list[this.index + 1].childNodes[0].classList.add("after");
+        list[this.index + 1].childNodes[0].classList.remove('now')
+        list[this.index + 1].childNodes[0].classList.add('after')
 
         if (list[this.index + 2] != null) {
-          list[this.index + 2].childNodes[0].classList.remove("after");
+          list[this.index + 2].childNodes[0].classList.remove('after')
         }
 
         setTimeout(() => {
-          this.doubleclick = true;
-        }, 400);
+          this.doubleclick = true
+        }, 400)
       }
     },
 
     nextCard: function () {
       if (this.index < this.project.length - 1 && this.doubleclick) {
-        this.doubleclick = false;
+        this.doubleclick = false
 
-        let list = document.querySelectorAll(".card_list .list_item");
-        this.index++;
+        const list = document.querySelectorAll('.card_list .list_item')
+        this.index++
 
-        this.transform -= 100;
-        this.margin -= 2.5;
+        this.transform -= 100
+        this.margin -= 2.5
 
         if (list[this.index + 1] != null) {
-          list[this.index + 1].childNodes[0].classList.add("after");
+          list[this.index + 1].childNodes[0].classList.add('after')
         }
 
-        list[this.index].childNodes[0].classList.remove("after");
-        list[this.index].childNodes[0].classList.add("now");
+        list[this.index].childNodes[0].classList.remove('after')
+        list[this.index].childNodes[0].classList.add('now')
 
-        list[this.index - 1].childNodes[0].classList.remove("now");
-        list[this.index - 1].childNodes[0].classList.add("before");
+        list[this.index - 1].childNodes[0].classList.remove('now')
+        list[this.index - 1].childNodes[0].classList.add('before')
 
         if (list[this.index - 2] != null) {
-          list[this.index - 2].childNodes[0].classList.remove("before");
+          list[this.index - 2].childNodes[0].classList.remove('before')
         }
 
         setTimeout(() => {
-          this.doubleclick = true;
-        }, 400);
+          this.doubleclick = true
+        }, 400)
       }
     },
     detailProject: function (event) {
-      let target = event.target;
-      if (target.getAttribute("class").indexOf("now") != -1) {
-        target.parentNode.classList.add("open");
-        this.$store.commit("dataIndex", this.index);
+      const target = event.target
+      if (target.getAttribute('class').indexOf('now') !== -1) {
+        target.parentNode.classList.add('open')
+        this.$store.commit('dataIndex', this.index)
         this.$router.push({
-          name: "Detail",
-        });
+          name: 'Detail'
+        })
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss">

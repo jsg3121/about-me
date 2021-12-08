@@ -10,38 +10,38 @@
 
 <script>
 export default {
-  created() {
-    window.addEventListener("scroll", this.scrollHeader);
+  created () {
+    window.addEventListener('scroll', this.scrollHeader)
   },
   methods: {
     scrollHeader: function () {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
 
       if (scrollTop > 0) {
-        let headerBg = document.querySelector(".header_container");
-        let headerTxt = document.querySelectorAll(
-          ".header_container .header_nav .link"
-        );
+        const headerBg = document.querySelector('.header_container')
+        const headerTxt = document.querySelectorAll(
+          '.header_container .header_nav .link'
+        )
 
-        headerBg.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
-        headerTxt.forEach((txt) => {
-          txt.style.color = "#ffffff";
-        });
-      } else if (scrollTop == 0) {
-        let headerBg = document.querySelector(".header_container");
-        let headerTxt = document.querySelectorAll(
-          ".header_container .header_nav .link"
-        );
+        headerBg.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
 
         headerTxt.forEach((txt) => {
-          txt.style.color = "";
-        });
-        headerBg.style.backgroundColor = "transparent";
+          txt.style.color = '#ffffff'
+        })
+      } else if (scrollTop === 0) {
+        const headerBg = document.querySelector('.header_container')
+        const headerTxt = document.querySelectorAll(
+          '.header_container .header_nav .link'
+        )
+
+        headerTxt.forEach((txt) => {
+          txt.style.color = ''
+        })
+        headerBg.style.backgroundColor = 'transparent'
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss">
